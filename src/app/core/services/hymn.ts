@@ -29,7 +29,16 @@ export class HymnService {
     }
 
     getCategories(): string[] {
-        return['Worship', 'Praise', 'Prayer'];
+        return[
+            'Praise',
+            'Worship',
+            'Grace',
+            'Faith',
+            'Prayer',
+            'Thanksgiving',
+            'Christmas',
+            'Easter'
+        ];
     }
     getHymnsByCategory(category: string): Hymn[] {
         return HYMNS.filter(hymn => hymn.category === category);

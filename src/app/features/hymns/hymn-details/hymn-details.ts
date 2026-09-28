@@ -3,6 +3,8 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { HymnService } from '../../../core/services/hymn';
 import { Hymn } from '../../../core/models/hymn.model';
 import { HttpParams } from '@angular/common/http';
+import { FavoritesService } from '../../../core/services/favorites';
+import { RecentlyViewedService } from '../../../core/services/recently-viewed';
 
 @Component({
   imports: [RouterLink],
@@ -13,6 +15,8 @@ import { HttpParams } from '@angular/common/http';
 export class HymnDetails {
   private route = inject(ActivatedRoute);
   private hymnService = inject(HymnService);
+  private favouritesService = inject(FavoritesService);
+  private recentlyViewedService = inject(RecentlyViewedService);
 
   private id = Number(this.route.snapshot.paramMap.get('id'));
 
@@ -27,6 +31,16 @@ export class HymnDetails {
       this.hymn = this.hymnService.getHymnById(id);
       this.previousHymn = this.hymnService.getPreviousHymn(id);
       this.nextHymn = this.hymnService.getNextHymn(id);
+
+      if(this.hymn){
+        this.recentlyViewedService.addRecentlyViewed(this.hymn);
+      }
     });
+  }
+
+  addToFavorites(){
+    if(this.hymn) {
+      this.favouritesService.addFavorites(this.hymn);
+    }
   }
 }

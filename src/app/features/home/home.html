@@ -31,3 +31,20 @@
     </a>
   }
 </section>
+
+<section>
+  <h2>Recently Viewed</h2>
+
+  @for (hymn of recentlyViewed; track hymn.id) {
+    <div>
+      <p>Hymn {{ hymn.number }}</p>
+      <h3>{{hymn.title }}</h3>
+      <p>{{ hymn.author }}</p>
+
+      <a [routerLink]="['/hymns', hymn.id]">Read Hymn</a>
+    </div>
+  }
+  @empty {
+    <p>You haven't viewed any hymns yet.</p>
+  }
+</section>

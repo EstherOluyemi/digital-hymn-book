@@ -13,6 +13,7 @@ export class HymnLibrary {
   private hymnService = inject(HymnService);
   searchTerm = '';
   selectedCategory = '';
+  sortOption = 'number'
 
   categories: string[] = this.hymnService.getCategories();
 
@@ -37,6 +38,16 @@ export class HymnLibrary {
     return matchesSearch && matchesCategory;
   });
 
+  if (this.sortOption === 'number') {
+  this.filteredHymns.sort((a, b) => a.number - b.number);
+}
+
+if (this.sortOption === 'title') {
+  this.filteredHymns.sort((a, b) =>
+    a.title.localeCompare(b.title)
+  );
+}
+
   }
 
   onSearch(event: Event) {
@@ -51,6 +62,12 @@ export class HymnLibrary {
 
     this.selectedCategory = select.value;
 
+    this.applyFilters();
+  }
+
+  onSortChange(event: Event) {
+    const select = event.target as HTMLSelectElement;
+    this.sortOption = select.value;
     this.applyFilters();
   }
 

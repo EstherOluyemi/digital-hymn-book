@@ -4,7 +4,7 @@ import { HymnService } from '../../core/services/hymn';
 import { Hymn } from '../../core/models/hymn.model';
 
 @Component({
-  imports: [],
+  imports: [RouterLink],
   selector: 'app-home',
   styleUrl: './home.css',
   templateUrl: './home.html',

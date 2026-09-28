@@ -13,6 +13,11 @@
         }
     </select>
 
+    <select (change)="onSortChange($event)">
+        <option value="number">Sort by Number</option>
+        <option value="title">Sort by Title</option>
+    </select>
+
     @for (hymn of filteredHymns; track hymn.id) {
         <div>
             <a [routerLink]="['/hymns', hymn.id]">Open Hymn</a>

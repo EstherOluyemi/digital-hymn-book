@@ -1,0 +1,103 @@
+section {
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  padding: 2rem;
+}
+
+section > h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+}
+
+/* SEARCH */
+
+input[type='search'] {
+  width: 100%;
+
+  padding: 0.75rem 1rem;
+
+  margin: 1.5rem 0 1rem;
+}
+
+/* FILTER + SORT */
+
+select {
+  padding: 0.65rem 1rem;
+
+  margin-right: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* HYMN ROWS */
+
+section > div {
+  display: grid;
+
+  grid-template-columns:
+    90px
+    2fr
+    1.5fr
+    1fr
+    auto;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 1rem 0;
+
+  border-bottom: 1px solid var(--border);
+}
+
+section > div:last-child {
+  border-bottom: none;
+}
+
+section > div h2 {
+  font-size: 0.95rem;
+}
+
+section > div p {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+section > div a {
+  color: var(--primary);
+
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+section > div a:hover {
+  color: var(--primary-dark);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  section {
+    padding: 1rem;
+  }
+
+  select {
+    width: 100%;
+
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  section > div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+
+    padding: 1rem 0;
+  }
+
+  section > div h2 {
+    font-size: 1.05rem;
+  }
+}

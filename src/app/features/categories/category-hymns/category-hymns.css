@@ -1,0 +1,63 @@
+section {
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  padding: 2rem;
+}
+
+section > h1 {
+  margin-bottom: 1.5rem;
+}
+
+/* HYMN ROW */
+
+section > div {
+  display: grid;
+
+  grid-template-columns:
+    100px
+    2fr
+    1.5fr
+    auto;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 1rem 0;
+
+  border-bottom: 1px solid var(--border);
+}
+
+section > div:last-child {
+  border-bottom: none;
+}
+
+section h2 {
+  font-size: 1rem;
+}
+
+section p {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+section a {
+  color: var(--primary);
+
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  section {
+    padding: 1rem;
+  }
+
+  section > div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}

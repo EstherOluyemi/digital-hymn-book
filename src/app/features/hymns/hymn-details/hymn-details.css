@@ -1,0 +1,115 @@
+.hymn-details {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  padding: 2.5rem;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.hymn-details > p:first-child {
+  color: var(--primary);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.hymn-details h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+
+  margin: 0.5rem 0;
+}
+
+.hymn-details > p {
+  color: var(--text-muted);
+}
+
+/* VERSES */
+
+.verses {
+  margin: 2.5rem 0;
+}
+
+.verses p {
+  color: var(--text);
+
+  line-height: 1.9;
+
+  margin-bottom: 1.5rem;
+
+  white-space: pre-line;
+}
+
+/* FAVORITE BUTTON */
+
+.hymn-details button {
+  padding: 0.6rem 1rem;
+
+  margin-top: 1rem;
+
+  background: transparent;
+  color: var(--primary);
+
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+
+  font-weight: 600;
+}
+
+.hymn-details button:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* PREVIOUS / NEXT */
+
+.hymn-navigation {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+
+  border-top: 1px solid var(--border);
+}
+
+.hymn-navigation a {
+  padding: 0.6rem 1rem;
+
+  background: var(--primary);
+  color: white;
+
+  border-radius: 6px;
+
+  font-weight: 600;
+}
+
+.hymn-navigation a:hover {
+  background: var(--primary-dark);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .hymn-details {
+    padding: 1.5rem;
+  }
+
+  .hymn-navigation {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hymn-navigation a {
+    text-align: center;
+  }
+}

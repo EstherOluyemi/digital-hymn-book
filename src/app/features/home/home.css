@@ -1,0 +1,201 @@
+.hero {
+  min-height: 320px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 3rem;
+
+  background: linear-gradient(
+    135deg,
+    #1e3a8a,
+    #0f172a
+  );
+
+  border-radius: 12px;
+  color: white;
+}
+
+.hero h1 {
+  max-width: 700px;
+
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  max-width: 550px;
+
+  color: #e2e8f0;
+
+  margin-bottom: 1.25rem;
+}
+
+.hero a {
+  display: inline-block;
+
+  background: var(--primary);
+  color: white;
+
+  padding: 0.7rem 1.2rem;
+
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+
+  border-radius: 6px;
+
+  font-weight: 600;
+}
+
+.hero a:hover {
+  background: var(--primary-dark);
+}
+
+/* HYMN OF THE DAY */
+
+.hymn-of-the-day {
+  margin-top: 2.5rem;
+
+  padding: 1.5rem;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.hymn-of-the-day > p:first-child {
+  color: var(--primary);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.hymn-of-the-day h2 {
+  margin: 0.4rem 0;
+}
+
+.hymn-of-the-day p {
+  color: var(--text-muted);
+}
+
+.hymn-of-the-day a {
+  display: inline-block;
+
+  margin-top: 1rem;
+
+  padding: 0.6rem 1rem;
+
+  background: var(--primary);
+  color: white;
+
+  border-radius: 6px;
+
+  font-weight: 600;
+}
+
+/* RECENTLY VIEWED */
+
+.recently-viewed {
+  margin-top: 2.5rem;
+}
+
+.recently-viewed h2 {
+  margin-bottom: 1rem;
+}
+
+.recently-viewed > div {
+  background: var(--surface);
+
+  padding: 1rem;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  margin-bottom: 0.75rem;
+}
+
+.recently-viewed h3 {
+  margin: 0.2rem 0;
+}
+
+.recently-viewed p {
+  color: var(--text-muted);
+}
+
+.recently-viewed a {
+  display: inline-block;
+
+  margin-top: 0.5rem;
+
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* CATEGORIES */
+
+.home-categories {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin-top: 2.5rem;
+}
+
+.home-categories h2 {
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.home-categories a {
+  flex: 1 1 180px;
+
+  padding: 1.5rem;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  text-align: center;
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.home-categories a:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+
+  transform: translateY(-2px);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 280px;
+    padding: 2rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .home-categories {
+    flex-direction: column;
+  }
+
+  .home-categories a {
+    flex: auto;
+  }
+}

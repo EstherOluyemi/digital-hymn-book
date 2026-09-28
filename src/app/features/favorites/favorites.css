@@ -1,0 +1,80 @@
+section {
+  max-width: 850px;
+
+  margin: 0 auto;
+}
+
+section > h1 {
+  margin-bottom: 1.5rem;
+}
+
+/* FAVORITE HYMN ROW */
+
+section > div {
+  display: grid;
+
+  grid-template-columns:
+    80px
+    1fr
+    auto
+    auto;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 1rem;
+
+  background: var(--surface);
+
+  border-bottom: 1px solid var(--border);
+}
+
+section > div:first-of-type {
+  border-radius: 8px 8px 0 0;
+}
+
+section h2 {
+  font-size: 1rem;
+}
+
+section p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+section a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+section button {
+  padding: 0.4rem 0.6rem;
+
+  background: transparent;
+  color: #dc2626;
+
+  border: none;
+
+  font-weight: 600;
+}
+
+section button:hover {
+  background: #fef2f2;
+
+  border-radius: 4px;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  section > div {
+    grid-template-columns: 1fr;
+
+    gap: 0.35rem;
+  }
+
+  section button {
+    justify-self: start;
+  }
+}
