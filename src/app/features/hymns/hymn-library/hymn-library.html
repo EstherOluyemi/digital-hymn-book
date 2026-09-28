@@ -1,0 +1,28 @@
+<section>
+    <h2>Hymn Library</h2>
+
+    <input type="search"
+    placeholder="Search hymns...."
+    (input)="onSearch($event)">
+
+    <select (change)="onCategoryChange($event)">
+        <option value="">All Categories</option>
+
+        @for (category of categories; track category) {
+            <option [value]="category">{{ category }}</option>
+        }
+    </select>
+
+    @for (hymn of filteredHymns; track hymn.id) {
+        <div>
+            <a [routerLink]="['/hymns', hymn.id]">Open Hymn</a>
+            <p>Hymn {{ hymn.number }}</p>
+            <h2>{{ hymn.title }}</h2>
+            <p>{{ hymn.author }}</p>
+            <p>{{ hymn.category }}</p>
+        </div>
+    }
+    @empty {
+        <p>No hymns match your search</p>
+    }
+</section>

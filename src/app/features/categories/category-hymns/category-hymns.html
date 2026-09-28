@@ -1,0 +1,18 @@
+<section>
+    <h1>{{ category }} Hymns</h1>
+
+    @for (hymn of hymns; track hymn.id) {
+        <div>
+            <p>Hymn {{ hymn.number }}</p>
+            <h2>{{ hymn.title }}</h2>
+            <p>{{ hymn.author }}</p>
+
+            <a [routerLink]="['/hymns', hymn.id]">
+                Open Hymn
+            </a>
+        </div>
+    }
+    @empty {
+        <p>No Hymns found in this category</p>
+    }
+</section>

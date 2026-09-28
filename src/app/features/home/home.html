@@ -1,0 +1,33 @@
+<section class="hero">
+  <h1>Digital Hymn Book</h1>
+
+  <p>
+    Discover hymns for worship, praise and prayer.
+  </p>
+
+  <a routerLink="/hymns">Browse Hymns</a>
+  <a routerLink="/categories">Browse Categories</a>
+</section>
+
+<section class="hymn-of-the-day">
+  <p>HYMN OF THE DAY</p>
+
+  <h2>{{ hymnOfTheDay.title }}</h2>
+
+  <p>Hymn {{ hymnOfTheDay.number }}</p>
+  <p>By {{ hymnOfTheDay.author }}</p>
+
+  <a [routerLink]="['/hymns', hymnOfTheDay.id]">
+    Read Hymn
+  </a>
+</section>
+
+<section class="home-categories">
+  <h2>Browse by Category</h2>
+
+  @for (category of categories; track category) {
+    <a [routerLink]="['/categories', category]">
+      {{ category }}
+    </a>
+  }
+</section>

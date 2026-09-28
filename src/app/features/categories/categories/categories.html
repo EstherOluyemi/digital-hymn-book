@@ -1,0 +1,13 @@
+<section>
+    <h1>Categories</h1>
+
+    @for (category of categories; track category) {
+        <div>
+            <h2>{{ category }}</h2>
+
+            <a [routerLink]="['/categories', category]">
+                View Hymns
+            </a>
+        </div>
+    }
+</section>
