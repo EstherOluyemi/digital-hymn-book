@@ -100,8 +100,6 @@
   font-weight: 600;
 }
 
-/* RECENTLY VIEWED */
-
 .recently-viewed {
   margin-top: 2.5rem;
 }
@@ -137,8 +135,6 @@
   color: var(--primary);
   font-weight: 600;
 }
-
-/* CATEGORIES */
 
 .home-categories {
   display: flex;
@@ -177,6 +173,59 @@
   border-color: var(--primary);
 
   transform: translateY(-2px);
+}
+
+.favorite-hymns {
+  margin-top: 2.5rem;
+}
+
+.favorite-hymns > h2 {
+  margin-bottom: 1rem;
+}
+
+.favorite-card {
+  background: var(--surface);
+
+  padding: 1rem;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  margin-bottom: 0.75rem;
+}
+
+.favorite-card h3 {
+  margin: 0.2rem 0;
+}
+
+.favorite-card p {
+  color: var(--text-muted);
+}
+
+.favorite-card a {
+  display: inline-block;
+
+  margin-top: 0.5rem;
+
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.empty-favorites {
+  padding: 1.5rem;
+
+  background: var(--surface-soft);
+  border-radius: var(--radius);
+}
+
+.empty-favorites p {
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.empty-favorites a {
+  color: var(--primary);
+  font-weight: 600;
 }
 
 /* MOBILE */

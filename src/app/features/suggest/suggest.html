@@ -1,1 +1,114 @@
-<p>suggest works!</p>
+<section class="suggest-section">
+    <div class="suggest-header">
+        <h1>Suggest a Hymn</h1>
+        <p>Know a hymn that should be included?
+            Send us the details below.
+        </p>
+
+        <form [formGroup]="suggestForm" (ngSubmit)="onSubmit()">
+            <div>
+                <label for="title">Hymn Title</label>
+                <input 
+                 type="text"
+                 id="title"
+                 formControlName="title"
+                 placeholder="Enter hymn title">
+
+                 @if (
+                    suggestForm.controls.title.invalid &&
+                    suggestForm.controls.title.touched
+                 ) {
+                    <p class="error-message">Hymn title is required</p>
+                 }
+            </div>
+            <div>
+                <label for="author">Author</label>
+                <input 
+                 type="text"
+                 id="author"
+                 formControlName="author"
+                 placeholder="Enter hymn author">
+                 @if (
+                    suggestForm.controls.author.invalid &&
+                    suggestForm.controls.author.touched
+                 ) {
+                    <p class="error-message">Author is required</p>
+                 }
+            </div>
+            <div>
+                <label for="category">Category</label>
+                <select id="category" formControlName="category">
+                    <option value="">Select a category</option>
+                    <option value="Praise">Praise</option>
+                    <option value="Worship">Worship</option>
+                    <option value="Grace">Grace</option>
+                    <option value="Faith">Faith</option>
+                    <option value="Prayer">Prayer</option>
+                    <option value="Thanksgiving">Thanksgiving</option>
+                    <option value="Easter">Easter</option>
+                </select>
+                @if (
+                    suggestForm.controls.category.invalid &&
+                    suggestForm.controls.category.touched
+                 ) {
+                    <p class="error-message">Please select a category</p>
+                 }
+            </div>
+            <div>
+                <label for="lyrics">Lyrics</label>
+                <textarea 
+                 id="lyrics"
+                 formControlName="lyrics"
+                 placeholder="Enter hymn lyrics">
+                 </textarea>
+                    @if (
+                        suggestForm.controls.lyrics.invalid &&
+                        suggestForm.controls.lyrics.touched
+                    ) {
+                        <p class="error-message">Lyrics are required</p>
+                    }
+            </div>
+            <div>
+                <label for="submittedBy">Submitted By</label>
+                <input 
+                 type="text"
+                 id="submittedBy"
+                 formControlName="submittedBy"
+                 placeholder="Enter your name">
+                    @if (
+                        suggestForm.controls.submittedBy.invalid &&
+                        suggestForm.controls.submittedBy.touched
+                    ) {
+                        <p class="error-message">Your name is required</p>
+                    }
+            </div>
+            <div>
+                <label for="email">Email Address</label>
+                <input 
+                 type="email"
+                 id="email"
+                 formControlName="email"
+                 placeholder="Enter your email address">
+
+                 @if (suggestForm.controls.email.touched) {
+                    @if (suggestForm.controls.email.hasError('required')) {
+                        <p class="error-message">Email address is required</p>
+                    }
+                    @if (suggestForm.controls.email.hasError('email')) {
+                        <p class="error-message">Please enter a valid email address</p>
+                    }
+                 }
+            </div>
+            <button type="submit"
+            [disabled]="isSubmitting">
+            {{ isSubmitting ? 'Submitting...' : 'Submit Hymn' }}
+            </button>
+
+            @if (submitSuccess) {
+                <p class="success-message">
+                    Thank you! Your hymn suggestion has been submitted.
+                </p>
+            }
+        </form>
+    </div>
+</section>

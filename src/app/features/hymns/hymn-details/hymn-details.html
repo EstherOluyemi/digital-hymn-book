@@ -9,7 +9,14 @@
                 <p>{{ verse }}</p>
             }
         </div>
-        <button (click)="addToFavorites()">Add to Favourites</button>
+        <button type="button" (click)="toggleFavorite()">
+            @if (isFavorite()) {
+                Remove From Favourite
+            }
+            @else {
+                Add to Favourites
+            }
+        </button>
         <div class="hymn-navigation">
             @if (previousHymn) {
                 <a [routerLink]="['/hymns', previousHymn.id]">

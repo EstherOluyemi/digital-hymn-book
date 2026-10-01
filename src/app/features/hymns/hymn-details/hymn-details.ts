@@ -38,9 +38,24 @@ export class HymnDetails {
     });
   }
 
-  addToFavorites(){
-    if(this.hymn) {
+  toggleFavorite() {
+    if(!this.hymn) {
+      return;
+    }
+
+    if(this.favouritesService.isFavorite(this.hymn.id)) {
+      this.favouritesService.removeFavorites(this.hymn.id);
+    }
+    else{
       this.favouritesService.addFavorites(this.hymn);
     }
+  }
+
+  isFavorite(): boolean {
+    if(!this.hymn) {
+      return false;
+    }
+
+    return this.favouritesService.isFavorite(this.hymn.id);
   }
 }

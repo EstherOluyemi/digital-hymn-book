@@ -32,7 +32,7 @@
   }
 </section>
 
-<section>
+<section class="recently-viewed">
   <h2>Recently Viewed</h2>
 
   @for (hymn of recentlyViewed; track hymn.id) {
@@ -46,5 +46,25 @@
   }
   @empty {
     <p>You haven't viewed any hymns yet.</p>
+  }
+</section>
+
+<section class="favorite-hymns">
+  <h2>Favorite Hymns</h2>
+
+  @for (hymn of FavoriteHymns; track hymn.id) {
+    <div class="favorite-card">
+      <p>Hymn {{ hymn.number }}</p>
+      <h3>{{hymn.title }}</h3>
+      <p>{{ hymn.author }}</p>
+
+      <a [routerLink]="['/hymns', hymn.id]">Read Hymn</a>
+    </div>
+  }
+  @empty {
+    <div class="empty-favorites">
+      <p>You haven't added any favorite hymns yet.</p>
+      <a routerLink="/hymns">Browse Hymns</a>
+    </div>
   }
 </section>

@@ -1,0 +1,113 @@
+.suggest-section {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.suggest-header {
+  margin-bottom: 2rem;
+}
+
+.suggest-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.suggest-header p {
+  color: var(--text-muted);
+}
+
+form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 180px;
+}
+
+form > div:nth-child(4) {
+  grid-column: 1 / -1;
+}
+
+button[type="submit"] {
+  grid-column: 1 / -1;
+
+  padding: 0.8rem;
+
+  background: var(--primary);
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  font-weight: 600;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+form .error-message {
+  color: #dc2626;
+  font-size: 0.85rem;
+}
+
+form .success-message {
+  grid-column: 1 / -1;
+
+  padding: 0.75rem;
+
+  color: #15803d;
+  background: #f0fdf4;
+
+  border-radius: 6px;
+
+  font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  form {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+
+  form > div:nth-child(4),
+  button[type="submit"],
+  .success-message {
+    grid-column: auto;
+  }
+}

@@ -20,11 +20,23 @@
 
     @for (hymn of filteredHymns; track hymn.id) {
         <div>
-            <a [routerLink]="['/hymns', hymn.id]">Open Hymn</a>
             <p>Hymn {{ hymn.number }}</p>
             <h2>{{ hymn.title }}</h2>
             <p>{{ hymn.author }}</p>
             <p>{{ hymn.category }}</p>
+
+            <a [routerLink]="['/hymns', hymn.id]">
+                Open Hymn
+            </a>
+
+            <button
+                type="button"
+                class="favorite-btn"
+                [class.is-favorite]="isFavorite(hymn.id)" //when is true
+                (click)="toggleFavorite(hymn)"
+                >
+                {{ isFavorite(hymn.id) ? 'Remove Favorite' : 'Add Favorite' }}
+            </button>
         </div>
     }
     @empty {

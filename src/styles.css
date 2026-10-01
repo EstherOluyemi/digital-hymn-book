@@ -15,6 +15,27 @@
   --max-width: 1200px;
 }
 
+body.dark-theme {
+  --background: #0f172a;
+  --surface: #1e293b;
+  --surface-soft: #334155;
+  --text: #f8fafc;
+  --text-muted: #cbd5e1;
+  --border: #334155;
+}
+
+body.text-small {
+  font-size: 14px;
+}
+
+body.text-medium {
+  font-size: 16px;
+}
+
+body.text-large {
+  font-size: 18px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

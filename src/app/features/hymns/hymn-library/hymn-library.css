@@ -1,9 +1,7 @@
 section {
   background: var(--surface);
-
   border: 1px solid var(--border);
   border-radius: 10px;
-
   padding: 2rem;
 }
 
@@ -12,43 +10,30 @@ section > h2 {
   margin-bottom: 0.25rem;
 }
 
-/* SEARCH */
-
 input[type='search'] {
   width: 100%;
-
   padding: 0.75rem 1rem;
-
   margin: 1.5rem 0 1rem;
 }
 
-/* FILTER + SORT */
-
 select {
   padding: 0.65rem 1rem;
-
   margin-right: 0.5rem;
   margin-bottom: 1.5rem;
 }
 
-/* HYMN ROWS */
-
 section > div {
   display: grid;
-
   grid-template-columns:
     90px
     2fr
     1.5fr
     1fr
-    auto;
-
+    auto
+    130px;
   align-items: center;
-
   gap: 1rem;
-
   padding: 1rem 0;
-
   border-bottom: 1px solid var(--border);
 }
 
@@ -67,13 +52,41 @@ section > div p {
 
 section > div a {
   color: var(--primary);
-
   font-size: 0.875rem;
   font-weight: 600;
 }
 
 section > div a:hover {
   color: var(--primary-dark);
+}
+
+.favorite-btn {
+  padding: 0.5rem 0.8rem;
+  background: #eff6ff;
+  color: var(--primary);
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.favorite-btn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.favorite-btn.is-favorite {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.favorite-btn.is-favorite:hover {
+  background: var(--primary-dark);
 }
 
 /* MOBILE */

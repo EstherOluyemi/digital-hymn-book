@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { HymnService } from '../../../core/services/hymn';
 import { Hymn } from '../../../core/models/hymn.model';
 import { RouterLink } from '@angular/router';
+import { FavoritesService } from '../../../core/services/favorites';
 
 @Component({
   imports: [RouterLink],
@@ -11,6 +12,8 @@ import { RouterLink } from '@angular/router';
 })
 export class HymnLibrary {
   private hymnService = inject(HymnService);
+  private favoriteService = inject(FavoritesService);
+
   searchTerm = '';
   selectedCategory = '';
   sortOption = 'number'
@@ -71,4 +74,16 @@ if (this.sortOption === 'title') {
     this.applyFilters();
   }
 
+  isFavorite(id: number): boolean {
+    return this.favoriteService.isFavorite(id);
+  }
+
+  toggleFavorite(hymn: Hymn) {
+    if(this.favoriteService.isFavorite(hymn.id)) {
+      this.favoriteService.removeFavorites(hymn.id);
+    }
+    else{ 
+      this.favoriteService.addFavorites(hymn);
+    }
+  }
 }

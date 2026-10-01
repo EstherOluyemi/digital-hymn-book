@@ -13,6 +13,11 @@ export class FavoritesService {
         return this.favoriteHymns();
     }
 
+    isFavorite(id: number): boolean{
+        return this.favoriteHymns()
+        .some(hymn => hymn.id === id);
+    }
+
     addFavorites(hymn: Hymn){
         const alreadyFavorite = this.favoriteHymns()
         .some(favorite => favorite.id === hymn.id);

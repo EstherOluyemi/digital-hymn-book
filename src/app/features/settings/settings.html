@@ -1,1 +1,59 @@
-<p>settings works!</p>
+<section class="settings-section">
+    <div class="settings-header">
+        <h1>Settings</h1>
+        <p>Customize your hymn boook experience</p>
+    </div>
+
+    <div class="settings-card">
+        <div class="setting-group">
+            <h2>Theme</h2>
+            <p>Choose how the hymn book looks</p>
+
+            <div class="setting-options">
+                <button
+                type="button"
+                [class.active]="theme === 'light'"
+                (click)="changeTheme('light')"
+                >Light</button>
+                <button
+                type="button"
+                [class.active]="theme === 'dark'"
+                (click)="changeTheme('dark')"
+                >Dark</button>
+            </div>
+        </div>
+        <div class="setting-group">
+            <h2>Text Size</h2>
+            <p>Choose a comfortable readiing size</p>
+
+            <div class="setting-options">
+                <button
+                type="button"
+                [class.active]="textSize === 'small'"
+                (click)="changeTextSize('small')"
+                >Small</button>
+                <button
+                type="button"
+                [class.active]="textSize === 'medium'"
+                (click)="changeTextSize('medium')"
+                >Medium</button>
+                <button
+                type="button"
+                [class.active]="textSize === 'large'"
+                (click)="changeTextSize('large')"
+                >Large</button>
+            </div>
+        </div>
+        <div class="rest-settings">
+            <div>
+                <h2>Reset Settings</h2>
+                <p>Restore all settings to their default values.</p>
+            </div>
+            <button
+            type="button"
+            class="reset-button"
+            (click)="resetSettings()"
+            >Reset Settings</button>
+        </div>
+    </div>
+</section>
