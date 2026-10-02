@@ -166,4 +166,85 @@ Be ever, ever given,
 By saints below and saints above,
 The Church in earth and heaven.`
 ],
+crownHimWithManyCrowns: [
+  `Crown Him with many crowns,
+The Lamb upon His throne;
+Hark! how the heavenly anthem drowns
+All music but its own!
+Awake, my soul, and sing
+Of Him who died for thee,
+And hail Him as thy matchless King
+Through all eternity.`,
+
+  `Crown Him the Son of God,
+Before the worlds began,
+And ye who tread where He hath trod,
+Crown Him the Son of Man;
+Who every grief hath known
+That wrings the human breast,
+And takes and bears them for His own,
+That all in Him may rest.`,
+
+  `Crown Him the Lord of life,
+Who triumphed o'er the grave,
+And rose victorious in the strife
+For those He came to save;
+His glories now we sing,
+Who died and rose on high,
+Who died eternal life to bring,
+And lives that death may die.`,
+
+  `Crown Him the Lord of heav'n,
+Enthroned in worlds above;
+Crown Him, the King to whom is giv'n
+The wondrous name of Love.
+Crown Him with many crowns,
+As thrones before Him fall;
+Crown Him, ye kings, with many crowns,
+For He is King of all.`
+],
+holyGodWePraiseThyName: [
+  `Holy God, we praise Thy name;
+Lord of all, we bow before Thee!
+All on earth Thy scepter claim,
+All in heaven above adore Thee;
+Infinite Thy vast domain,
+Everlasting is Thy reign.`,
+
+  `Hark, the glad celestial hymn
+Angel choirs above are raising;
+Cherubim and seraphim,
+In unceasing chorus praising,
+Fill the heavens with sweet accord:
+Holy, holy, holy, Lord.`,
+
+  `Holy Father, holy Son,
+Holy Spirit, three we name Thee,
+Though in essence only one;
+Undivided God we claim Thee;
+And adoring, bend the knee,
+While we sing our praise to Thee.`
+],
+holyHolyHoly: [
+  `Holy, Holy, Holy, Lord God Almighty!
+Early in the morning our song shall rise to Thee;
+Holy, Holy, Holy! merciful and mighty;
+God in Three Persons, Blessed Trinity!`,
+
+  `Holy, Holy, Holy! all the saints adore Thee,
+Casting down their golden crowns around the glassy sea;
+Cherubim and Seraphim falling down before Thee,
+Which wert, and art, and evermore shalt be.`,
+
+  `Holy, Holy, Holy! though the darkness hide Thee,
+Though the eye of sinful man Thy glory may not see,
+Only Thou art holy; there is none beside Thee
+Perfect in power, in love, in purity.`,
+
+  `Holy, Holy, Holy, Lord God Almighty!
+All Thy works shall praise Thy Name, in earth and sky, and sea;
+Holy, Holy, Holy! merciful and mighty,
+God in three Persons, blessed Trinity!`
+],
+
 }; 

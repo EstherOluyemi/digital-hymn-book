@@ -3,6 +3,7 @@ import { HymnService } from '../../../core/services/hymn';
 import { Hymn } from '../../../core/models/hymn.model';
 import { RouterLink } from '@angular/router';
 import { FavoritesService } from '../../../core/services/favorites';
+import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
 
 @Component({
   imports: [RouterLink],
@@ -13,6 +14,7 @@ import { FavoritesService } from '../../../core/services/favorites';
 export class HymnLibrary {
   private hymnService = inject(HymnService);
   private favoriteService = inject(FavoritesService);
+  private searchSubject = new Subject<string>();
 
   searchTerm = '';
   selectedCategory = '';
@@ -53,11 +55,19 @@ if (this.sortOption === 'title') {
 
   }
 
+  constructor(){
+    this.searchSubject.pipe(
+      debounceTime(300),
+      distinctUntilChanged()
+    ).subscribe((searchTerm) => {
+      this.searchTerm = searchTerm;
+      this.applyFilters();
+    });
+  }
   onSearch(event: Event) {
     const input = event.target as HTMLInputElement;
-    this.searchTerm = input.value.toLowerCase();
+    this.searchSubject.next(input.value.toLowerCase());
 
-    this.applyFilters();
   }
 
   onCategoryChange(event: Event) {

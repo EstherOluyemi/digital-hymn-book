@@ -48,7 +48,7 @@ export const HYMNS: Hymn[] = [
   title: 'Crown Him with Many Crowns',
   author: 'Matthew Bridges / Godfrey Thring',
   category: 'Praise',
-  verses: []
+  verses: HYMN_LYRICS.crownHimWithManyCrowns
 },
 {
   id: 7,
@@ -56,7 +56,7 @@ export const HYMNS: Hymn[] = [
   title: 'Holy God, We Praise Thy Name',
   author: 'Ignaz Franz / Clarence A. Walworth',
   category: 'Praise',
-  verses: []
+  verses: HYMN_LYRICS.holyGodWePraiseThyName
 },
 // Worship
 {
@@ -65,13 +65,13 @@ export const HYMNS: Hymn[] = [
   title: 'Holy, Holy, Holy! Lord God Almighty!',
   author: 'Reginald Heber',
   category: 'Worship',
-  verses: []
+  verses: HYMN_LYRICS.holyHolyHoly
 },
 {
   id: 9,
   number: 9,
   title: 'Fairest Lord Jesus',
-  author: 'Anonymous',
+  author: 'Anonymous / Joseph A. Seiss',
   category: 'Worship',
   verses: []
 },
