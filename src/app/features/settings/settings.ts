@@ -10,6 +10,10 @@ import { SettingsService } from '../../core/services/settings';
 export class Settings {
   private settingsService = inject(SettingsService);
 
+  constructor(){
+    this.settingsService.applySettings();  
+  }
+
   get theme() {
     return this.settingsService.getTheme();
   }
@@ -18,7 +22,7 @@ export class Settings {
     return this.settingsService.getTextSize();
   }
 
-  changeTheme(theme: 'light' | 'dark') {
+  changeTheme(theme: 'light' | 'dark' | 'system') {
     this.settingsService.setTheme(theme);
   }
 

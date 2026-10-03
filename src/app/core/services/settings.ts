@@ -4,20 +4,21 @@ import { Injectable, signal } from '@angular/core';
     providedIn: 'root'
 })
 export class SettingsService {
-    private theme = signal<'light' | 'dark'>(this.loadTheme());
+    private theme = signal<'light' | 'dark' | 'system'>(this.loadTheme());
     private textSize = signal<'small' | 'medium' | 'large'>(this.loadTextSize());
 
     getTheme(){
         return this.theme();
     }
 
-    setTheme(theme: 'light' | 'dark'){
+    setTheme(theme: 'light' | 'dark' | 'system'){
         this.theme.set(theme);
         localStorage.setItem('theme', theme);
 
         document.body.classList.toggle(
             'dark-theme',
-            theme === 'dark'
+            theme === 'dark' ||
+            (theme === 'system' && this.isSystemDark())
         );
     }
     getTextSize(){
@@ -37,11 +38,17 @@ export class SettingsService {
 
     }
 
-    private loadTheme(): 'light' | 'dark' {
+    private loadTheme(): 'light' | 'dark' | 'system' {
         const savedTheme = localStorage.getItem('theme');
 
-        return savedTheme === 'dark' ? 'dark' : 'light';
-
+        if (
+            savedTheme === 'light' ||
+            savedTheme === 'dark' ||
+            savedTheme === 'system'
+        ) {
+            return savedTheme;
+        }
+        return 'light';
     }
 
     private loadTextSize(): 'small' | 'medium' | 'large' {
@@ -59,7 +66,8 @@ export class SettingsService {
     applySettings() {
             document.body.classList.toggle(
             'dark-theme',
-            this.theme() === 'dark'
+            this.theme() === 'dark' ||
+            this.theme() === 'system' && this.isSystemDark()
         );
 
         document.body.classList.remove(
@@ -76,5 +84,9 @@ export class SettingsService {
     resetSettings(){
         this.setTheme('light');
         this.setTextSize('medium');
+    }
+
+    private isSystemDark():  boolean {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
 }

@@ -7,7 +7,7 @@
         <h2>{{ hymn.title }}</h2>
         <p>{{ hymn.author }}</p>
 
-        <a [routerLink]="['hymns', hymn.id]">Read Hymn</a>
+        <a [routerLink]="['/hymns', hymn.id]">Read Hymn</a>
         </div>
 
         <button type="button" (click)="removeFavorites(hymn.id)">Remove</button>

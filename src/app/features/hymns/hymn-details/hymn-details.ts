@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { HymnService } from '../../../core/services/hymn';
 import { Hymn } from '../../../core/models/hymn.model';
-import { HttpParams } from '@angular/common/http';
 import { FavoritesService } from '../../../core/services/favorites';
 import { RecentlyViewedService } from '../../../core/services/recently-viewed';
 
@@ -17,8 +16,6 @@ export class HymnDetails {
   private hymnService = inject(HymnService);
   private favouritesService = inject(FavoritesService);
   private recentlyViewedService = inject(RecentlyViewedService);
-
-  private id = Number(this.route.snapshot.paramMap.get('id'));
 
   hymn: Hymn | undefined;
   previousHymn: Hymn | undefined;

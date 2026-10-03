@@ -4,6 +4,7 @@ import { Hymn } from '../../../core/models/hymn.model';
 import { RouterLink } from '@angular/router';
 import { FavoritesService } from '../../../core/services/favorites';
 import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   imports: [RouterLink],
@@ -58,7 +59,8 @@ if (this.sortOption === 'title') {
   constructor(){
     this.searchSubject.pipe(
       debounceTime(300),
-      distinctUntilChanged()
+      distinctUntilChanged(),
+      takeUntilDestroyed()
     ).subscribe((searchTerm) => {
       this.searchTerm = searchTerm;
       this.applyFilters();

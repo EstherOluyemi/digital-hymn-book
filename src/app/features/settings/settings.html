@@ -15,11 +15,18 @@
                 [class.active]="theme === 'light'"
                 (click)="changeTheme('light')"
                 >Light</button>
+
                 <button
                 type="button"
                 [class.active]="theme === 'dark'"
                 (click)="changeTheme('dark')"
                 >Dark</button>
+                
+                <button
+                type="button"
+                [class.active]="theme === 'system'"
+                (click)="changeTheme('system')"
+                >System</button>
             </div>
         </div>
         <div class="setting-group">
@@ -44,7 +51,7 @@
                 >Large</button>
             </div>
         </div>
-        <div class="rest-settings">
+        <div class="reset-settings">
             <div>
                 <h2>Reset Settings</h2>
                 <p>Restore all settings to their default values.</p>

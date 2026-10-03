@@ -49,5 +49,14 @@ export const routes: Routes = [
             import('./features/settings/settings')
                 .then(m => m.Settings),
         },
+        {
+            path: '**',
+            redirectTo: '',
+            pathMatch: 'full'
+        }
 
 ];
+
+
+
+
