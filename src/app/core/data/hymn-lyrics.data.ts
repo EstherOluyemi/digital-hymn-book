@@ -353,5 +353,109 @@ God in three Persons, blessed Trinity!`
     ``,
 
     ``
+  ],
+
+  beneathTheCrossOfJesus: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  blessedAssurance: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  tisSoSweetToTrustInJesus: [
+    ``,
+
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  myFaithLooksUpToThee: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  standingOnThePromises: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  aMightyFortressIsOurGod: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  howFirmAFoundation: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  trustAndObey: [
+    ``,
+
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  whatAFriendWeHaveInJesus: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  sweetHourOfPrayer: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  passMeNotOGentleSavior: [
+    ``,
+
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  iNeedTheeEveryHour: [
+    ``,
+
+    ``,
+
+    ``,
+
+    ``
   ]
 };
