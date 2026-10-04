@@ -623,5 +623,175 @@ God in three Persons, blessed Trinity!`
     ``,
 
     ``
+  ],
+
+  theFirstNoel: [
+    `The first Noel the angel did say
+Was to certain poor shepherds in fields as they lay,
+In fields where they lay keeping their sheep
+On a cold winter's night that was so deep.
+
+Refrain:
+Noel, Noel, Noel, Noel!
+Born is the King of Israel!`,
+
+    `They looked up and saw a star
+Shining in the East beyond them far,
+And to the earth it gave great light,
+And so it continued both day and night.
+
+Refrain:
+Noel, Noel, Noel, Noel!
+Born is the King of Israel!`
+  ],
+
+  theStrifeIsOerTheBattleDone: [
+    `The strife is o'er, the battle done;
+The victory of life is won;
+The song of triumph has begun:
+Alleluia!`,
+
+    `The pow'rs of death have done their worst;
+But Christ their legions has dispersed;
+Let shouts of holy joy outburst:
+Alleluia!`,
+
+    `The three sad days are quickly sped;
+He rises glorious from the dead;
+All glory to our risen Head!
+Alleluia!`,
+
+    `He closed the yawning gates of hell;
+The bars from heav'n's high portals fell.
+Let hymns of praise His triumph tell.
+Alleluia!`,
+
+    `Lord, by the stripes which wounded Thee,
+From death's dread sting Thy servants free,
+That we may live and sing to Thee.
+Alleluia!`
+  ],
+
+  atTheLambsHighFeastWeSing: [
+    `At the Lamb's high feast we sing
+Praise to our victorious King,
+Who hath wash'd us in the tide
+Flowing from His pierced side;
+Praise we Him, Whose love divine
+Gives His sacred blood for wine,
+Gives His body for the feast,
+Christ the Victim, Christ the Priest.`,
+
+    `Where the Paschal blood is poured,
+Death's dark angel sheathes his sword;
+Israel's hosts triumphant go
+Through the wave that drowns the foe.
+Praise we Christ, Whose blood was shed,
+Paschal Victim, Paschal bread;
+With sincerity and love
+Eat we manna from above.`,
+
+    `Mighty Victim from the sky
+Hell's fierce powers beneath Thee lie;
+Thou hast conquered in the fight,
+Thou hast brought us life and light:
+Now no more can death appal,
+Now no more the grave enthral;
+Thou hast opened Paradise,
+And in Thee Thy saints shall rise.`,
+
+    `Easter triumph, Easter joy,
+Sin alone can this destroy;
+From sin's power do Thou set free
+Souls new-born, O Lord, in Thee.
+Hymns of glory and of praise,
+Risen Lord, to Thee we raise;
+Holy Father, praise to Thee,
+With the Spirit, ever be.`
+  ],
+
+  comeYeFaithfulRaiseTheStrain: [
+    `Come, ye faithful, raise the strain
+Of triumphant gladness;
+God hath brought His Israel
+Into joy from sadness;
+Loosed from Pharaoh's bitter yoke
+Jacob's sons and daughters;
+Led them with unmoistened foot
+Through the Red Sea waters.`,
+
+    `'Tis the spring of souls to-day;
+Christ hath burst His prison,
+And from three days' sleep in death
+As a sun hath risen;
+All the winter of our sins,
+Long and dark, is flying
+From His light, to Whom we give
+Laud and praise undying.`,
+
+    `Now the Queen of seasons bright
+With the day of splendour,
+With the royal feast of feasts,
+Comes its joy to render;
+Comes to glad Jerusalem,
+Who with true affection
+Welcomes in unwearied strains
+Jesus' resurrection.`,
+
+    `Neither might the gates of death,
+Nor the tomb's dark portal,
+Nor the watchers, nor the seal,
+Hold Thee as a mortal:
+But to-day amidst Thine own
+Thou didst stand, bestowing
+That Thy peace which evermore
+Passeth human knowing.`
+  ],
+
+  oSonsAndDaughtersLetUsSing: [
+    `O sons and daughters let us sing!
+The King of heaven, the glorious King,
+O'er death today rose triumphing.
+Alleluia!`,
+
+    `That Easter morn, at break of day
+The faithful women went their way
+To seek the tomb where Jesus lay.
+Alleluia!`,
+
+    `An angel clad in white they see,
+Who sat, and spake unto the three,
+"Your Lord doth go to Galilee."
+Alleluia!`,
+
+    `That night the apostles met in fear;
+Amidst them came their Lord most dear,
+And said, "My peace be on all here."
+Alleluia!`,
+
+    `When Thomas first the tidings heard,
+How they had seen the risen Lord,
+He doubted the disciples' word.
+Alleluia!`,
+
+    `"My pierced hands, O Thomas, see;
+My hands, My feet, I show to thee;
+Not faithless, but believing be."
+Alleluia!`,
+
+    `No longer Thomas then denied,
+He saw the feet, the hands, the side;
+"Thou art my Lord and God," he cried,
+Alleluia!`,
+
+    `How blest are they who have not seen,
+And yet whose faith has constant been,
+For they eternal life shall win.
+Alleluia!`,
+
+    `On this most holy day of days,
+To God your hearts and voices raise,
+In laud, and jubilee, and praise.
+Alleluia!`
   ]
 };
