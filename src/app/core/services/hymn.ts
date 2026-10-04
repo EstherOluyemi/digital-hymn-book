@@ -45,7 +45,17 @@ export class HymnService {
     }
 
     getHymnOfTheDay(): Hymn {
-        return HYMNS[0];
-    }
+        const today = new Date();
+        const startOfYear = new Date(today.getFullYear(), 0, 0);
+
+        const difference = today.getTime() - startOfYear.getTime();
+        const dayOfYear = Math.floor(
+            difference / (1000 * 60 * 60 * 24)
+        );
+
+        const hymnIndex = dayOfYear % HYMNS.length;
+
+        return HYMNS[hymnIndex];
+        }
 }
  
