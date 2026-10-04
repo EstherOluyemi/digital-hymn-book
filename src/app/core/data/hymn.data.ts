@@ -171,7 +171,7 @@ export const HYMNS: Hymn[] = [
   title: 'Beneath the Cross of Jesus',
   author: 'Elizabeth C. Clephane',
   category: 'Grace',
-  verses: []
+  verses: HYMN_LYRICS.beneathTheCrossOfJesus
 },
 
 // Faith
@@ -181,7 +181,7 @@ export const HYMNS: Hymn[] = [
   title: 'Blessed Assurance',
   author: 'Fanny J. Crosby',
   category: 'Faith',
-  verses: []
+  verses: HYMN_LYRICS.blessedAssurance
 },
 {
   id: 23,
@@ -189,7 +189,7 @@ export const HYMNS: Hymn[] = [
   title: '’Tis So Sweet to Trust in Jesus',
   author: 'Louisa M. R. Stead',
   category: 'Faith',
-  verses: []
+  verses: HYMN_LYRICS.tisSoSweetToTrustInJesus
 },
 {
   id: 24,
@@ -197,7 +197,7 @@ export const HYMNS: Hymn[] = [
   title: 'My Faith Looks Up to Thee',
   author: 'Ray Palmer',
   category: 'Faith',
-  verses: []
+  verses: HYMN_LYRICS.myFaithLooksUpToThee
 },
 {
   id: 25,
@@ -205,7 +205,7 @@ export const HYMNS: Hymn[] = [
   title: 'Standing on the Promises',
   author: 'Russell Kelso Carter',
   category: 'Faith',
-  verses: []
+  verses: HYMN_LYRICS.standingOnThePromises
 },
 {
   id: 26,
@@ -213,7 +213,7 @@ export const HYMNS: Hymn[] = [
   title: 'A Mighty Fortress Is Our God',
   author: 'Martin Luther',
   category: 'Faith',
-  verses: []
+  verses: HYMN_LYRICS.aMightyFortressIsOurGod
 },
 {
   id: 27,
@@ -221,7 +221,7 @@ export const HYMNS: Hymn[] = [
   title: 'How Firm a Foundation',
   author: 'K. (attributed to George Keith / R. Keen)',
   category: 'Faith',
-  verses: []
+  verses: HYMN_LYRICS.howFirmAFoundation
 },
 {
   id: 28,
@@ -229,7 +229,7 @@ export const HYMNS: Hymn[] = [
   title: 'Trust and Obey',
   author: 'John H. Sammis',
   category: 'Faith',
-  verses: []
+  verses: HYMN_LYRICS.trustAndObey
 },
 // Prayer
 {
@@ -238,7 +238,7 @@ export const HYMNS: Hymn[] = [
   title: 'What a Friend We Have in Jesus',
   author: 'Joseph M. Scriven',
   category: 'Prayer',
-  verses: []
+  verses: HYMN_LYRICS.whatAFriendWeHaveInJesus
 },
 {
   id: 30,
@@ -246,7 +246,7 @@ export const HYMNS: Hymn[] = [
   title: 'Sweet Hour of Prayer',
   author: 'William W. Walford',
   category: 'Prayer',
-  verses: []
+  verses: HYMN_LYRICS.sweetHourOfPrayer
 },
 {
   id: 31,
@@ -254,7 +254,7 @@ export const HYMNS: Hymn[] = [
   title: 'Pass Me Not, O Gentle Savior',
   author: 'Fanny J. Crosby',
   category: 'Prayer',
-  verses: []
+  verses: HYMN_LYRICS.passMeNotOGentleSavior
 },
 {
   id: 32,
@@ -262,7 +262,7 @@ export const HYMNS: Hymn[] = [
   title: 'I Need Thee Every Hour',
   author: 'Annie S. Hawks / Robert Lowry',
   category: 'Prayer',
-  verses: []
+  verses: HYMN_LYRICS.iNeedTheeEveryHour
 },
 {
   id: 33,
