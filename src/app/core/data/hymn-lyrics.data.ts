@@ -744,65 +744,84 @@ O come, let us adore Him; O come, let us adore Him; O come, let us adore Him, Ch
   ],
 
   harkTheHeraldAngelsSing: [
-    ``,
+    `Hark! The herald angels sing, "glory to the newborn King! Peace on earth and mercy mild, God and sinner reconciled!" Joyful, all ye nations, rise; join the triumph of the skies; with the angelic host proclaim, Christ is born in Bethlehem! With the angelic host proclaim, Christ is born in Bethlehem!`,
 
-    ``,
+    `Mild, he lays His glory by, born that man no more may die; born to raise the sons of earth, born to give them second birth. Veiled in flesh the Godhead see; hail the incarnate Deity; pleased as man with men to dwell, Jesus, our Immanuel! Pleased as man with men to dwell, Jesus, our Immanuel!`,
 
-    ``
+    `Hail the heav'nborn Prince of Peace! Hail the Son of Righteousness! Light and life to all He brings, ris'n with healing in His wings. Christ, by highest heav'n adored, Christ, the everlasting Lord; come, desire of nations, come, fix in us Thy humble home; come, desireof nations, come, fix in us Thy humble home.`
+  
   ],
 
   silentNight: [
-    ``,
+    `Silent night, holy night, All is calm, all is bright Round yon virgin mother and Child. Holy Infant so tender and mild, Sleep in heavenly peace, Sleep in heavenly peace.`,
 
-    ``,
+    `Silent night, holy night, Shepherds quake at the sight, Glories stream from heaven afar, Angels singing their "Hallelujah! Christ the Savior is born! Christ the Savior is born." born!"`,
 
-    ``
+    `Silent night, holy night, Son of God, lend Thy light; With the host we joyfully sing: "Glory, honor, to Jesus our King! Christ the Savior was born, Christ the Savior was born."`
+  
   ],
 
   angelsWeHaveHeardOnHigh: [
-    ``,
+    `Angels we have heard on high, Sweetly singing o'er the plains: And the mountains in reply, Echoing their joyous strains.
 
-    ``,
+Refrain:
+Gloria in excelsis Deo! Gloria in excelsis Deo!`,
 
-    ``,
+    `Shepherds, why this jubilee? Why your joyous strains prolong? What the gladsome tidings be Which inspire your heav'nly song?
 
-    ``
+Refrain:
+Gloria in excelsis Deo! Gloria in excelsis Deo!`,
+
+    `Come to Bethlehem, and see Him whose birth the angels sing; Come, adore on bended knee Christ the Lord, the newborn King.
+
+Refrain:
+Gloria in excelsis Deo! Gloria in excelsis Deo!`,
+
+    `See Him in a manger laid, Whom the choirs of angels praise; Mary, Joseph, lend your aid, While our hearts in love we raise?
+
+Refrain:
+Gloria in excelsis Deo! Gloria in excelsis Deo!`
+  
   ],
 
   awayInAManger: [
-    ``,
+    `Away in a manger no crib for a bed, The little Lord Jesus laid down His sweet head; The stars in the sky looked down where He lay, The little Lord Jesus, asleep on the hay.`,
 
-    ``,
+    `The cattle are lowing, the Baby awakes, But little Lord Jesus, no crying He makes; I love Thee, Lord Jesus! look down from the sky, And stay by my cradle till morning is nigh.`,
 
-    ``
+    `Be near me, Lord Jesus, I ask Thee to stay Close by me for ever, and love me, I pray; Bless all the dear children in Thy tender care, And fit us for heaven to live with Thee there.`
+  
   ],
 
   christTheLordIsRisenToday: [
-    ``,
+    `Christ, the Lord, is ris'n today, Hallelujah! Sons of men and angels say, Hallelujah! Raise your joys and triumphs high Hallelujah! Sing, ye heav'ns and earth, reply, Hallelujah!`,
 
-    ``,
+    `Vain the stone, the watch, the seal, Hallelujah! Christ hath burst the gates of hell, Hallelujah! Death in vain forbids His rise, Hallelujah! Christ hath opened paradise, Hallelujah!`,
 
-    ``
+    `Lives again our glorious King, Hallelujah! Where, o death, is now thy sting? Hallelujah! Once He died our souls to save, Hallelujah! Where's thy vict'ry, boasting grave? Hallelujah!`
+  
   ],
 
   jesusChristIsRisenToday: [
-    ``,
+    `Love Him, Love Him, Love Him in the morning, Love Him at the noontime. Love Him, Love Him, Love Him when the sun goes down.`,
 
-    ``,
+    `Jesus, Jesus, Jesus in the morning, Jesus at the noontime. Jesus, Jesus, Jesus when the sun goes down.`,
 
-    ``,
+    `Praise Him, Praise Him, Praise Him in the morning, Praise Him at the noontime. Praise Him, Praise Him, Praise Him when the sun goes down.`,
 
-    ``,
+    `Serve Him, Serve Him, Serve Him in the morning, Serve Him at the noontime. Serve Him, Serve Him, Serve Him when the sun goes down.`,
 
-    ``
+    `Thank Him, Thank Him, Thank Him in the morning, Thank Him at the noontime. Thank Him, Thank Him, Thank Him when the sun goes down.`
+  
   ],
 
   theDayOfResurrection: [
-    ``,
+    `The day of resurrection! Earth, tell it out abroad; The passover of gladness, The passover of God. From death to life eternal, From earth unto the sky, Our Christ hath brought us over With hymns of victory.`,
 
-    ``,
+    `Our hearts be pure from evil, That we may see aright The Lord in rays eternal Of resurrection light; And listening to His accents, May hear, so calm and plain His own "All Hail!" and, hearing, May raise the victor strain.`,
 
-    ``
+    `Now let the heav'ns be joyful! Let earth her song begin! Let the round world keep triumph, And all that is therein! Let all things seen and unseen Their notes in gladness blend, For Christ the Lord hath risen, Our joy that hath no end.`
+  
   ],
 
   theFirstNoel: [
