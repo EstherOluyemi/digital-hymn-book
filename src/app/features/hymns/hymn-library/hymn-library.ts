@@ -19,7 +19,9 @@ export class HymnLibrary {
 
   searchTerm = '';
   selectedCategory = '';
-  sortOption = 'number'
+  sortOption = 'number';
+  currentPage = 1;
+  itemsPerPage = 10;
 
   categories: string[] = this.hymnService.getCategories();
 
@@ -53,7 +55,7 @@ if (this.sortOption === 'title') {
     a.title.localeCompare(b.title)
   );
 }
-
+  this.currentPage = 1;
   }
 
   constructor(){
@@ -97,5 +99,29 @@ if (this.sortOption === 'title') {
     else{ 
       this.favoriteService.addFavorites(hymn);
     }
+  }
+
+  get totalPages(): number{
+    return Math.ceil(this.filteredHymns.length / this.itemsPerPage);
+  }
+
+  get paginatedHymns() : Hymn[] {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    const endIndex = startIndex + this.itemsPerPage;
+    return this.filteredHymns.slice(startIndex, endIndex);
+  }
+
+  goToPage(page: number) {
+    if(page >= 1 && page <= this.totalPages) {
+      this.currentPage = page;
+    }
+  }
+
+  previousPage(){
+    this.goToPage(this.currentPage - 1);
+  }
+
+  nextPage(){
+    this.goToPage(this.currentPage + 1);
   }
 }

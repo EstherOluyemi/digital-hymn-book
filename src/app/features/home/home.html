@@ -1,70 +1,146 @@
-<section class="hero">
-  <h1>Digital Hymn Book</h1>
+<section class="hymn-hero">
+  <img src="/images/home/optimized/hymn-hero.webp" alt="" class="hymn-hero-image"/>
 
-  <p>
-    Discover hymns for worship, praise and prayer.
-  </p>
+  <div class="hymn-hero-overlay"></div>
 
-  <a routerLink="/hymns">Browse Hymns</a>
-  <a routerLink="/categories">Browse Categories</a>
+  <div class="hymn-hero-content">
+    <p class="hero-label">HYMN OF THE DAY</p>
+
+    <h1>{{ hymnOfTheDay.title }}</h1>
+
+    <p class="hero-meta">
+      Hymn {{ hymnOfTheDay.number }} . {{ hymnOfTheDay.author }}
+    </p>
+
+    <a class="hero-button"
+    [routerLink]="['/hymns', hymnOfTheDay.id]">Read Hymn</a>
+  </div>
 </section>
 
-<section class="hymn-of-the-day">
-  <p>HYMN OF THE DAY</p>
-
-  <h2>{{ hymnOfTheDay.title }}</h2>
-
-  <p>Hymn {{ hymnOfTheDay.number }}</p>
-  <p>By {{ hymnOfTheDay.author }}</p>
-
-  <a [routerLink]="['/hymns', hymnOfTheDay.id]">
-    Read Hymn
-  </a>
-</section>
-
-<section class="home-categories">
-  <h2>Browse by Category</h2>
-
-  @for (category of categories; track category) {
-    <a [routerLink]="['/categories', category]">
-      {{ category }}
-    </a>
-  }
-</section>
-
-<section class="recently-viewed">
-  <h2>Recently Viewed</h2>
-
-  @for (hymn of recentlyViewed; track hymn.id) {
+<section class="home-section recently-viewed">
+  <div class="section-heading">
     <div>
-      <p>Hymn {{ hymn.number }}</p>
-      <h3>{{hymn.title }}</h3>
-      <p>{{ hymn.author }}</p>
-
-      <a [routerLink]="['/hymns', hymn.id]">Read Hymn</a>
+      <p class="section-label">CONTINUE READING</p>
+      <h2>Recently Viewed</h2>
     </div>
-  }
-  @empty {
-    <p>You haven't viewed any hymns yet.</p>
-  }
+
+    <a routerLink="/hymns" class="view-all">View all →</a>
+  </div>
+
+  <div class="hymn-card-grid">
+    @for (hymn of recentlyViewed; track hymn.id) {
+      <a
+        class="hymn-card"
+        [routerLink]="['/hymns', hymn.id]"
+      >
+        <div class="hymn-card-image">
+          <img
+            [src]="'/images/categories/optimized/' + hymn.category.toLowerCase() + '.webp'"
+            alt=""
+            loading="lazy"
+          />
+
+          <span class="hymn-number">
+            Hymn {{ hymn.number }}
+          </span>
+        </div>
+
+        <div class="hymn-card-content">
+          <p class="card-category">{{ hymn.category }}</p>
+
+          <h3>{{ hymn.title }}</h3>
+
+          <p class="card-author">{{ hymn.author }}</p>
+        </div>
+      </a>
+    }
+
+    @empty {
+      <div class="empty-state">
+        <p>No recently viewed hymns yet.</p>
+        <a routerLink="/hymns">Browse Hymns</a>
+      </div>
+    }
+  </div>
 </section>
 
-<section class="favorite-hymns">
-  <h2>Favorite Hymns</h2>
-
-  @for (hymn of FavoriteHymns; track hymn.id) {
-    <div class="favorite-card">
-      <p>Hymn {{ hymn.number }}</p>
-      <h3>{{hymn.title }}</h3>
-      <p>{{ hymn.author }}</p>
-
-      <a [routerLink]="['/hymns', hymn.id]">Read Hymn</a>
+<section class="home-section favorite-hymns">
+  <div class="section-heading">
+    <div>
+      <p class="section-label">YOUR COLLECTION</p>
+      <h2>Favorite Hymns</h2>
     </div>
-  }
-  @empty {
-    <div class="empty-favorites">
-      <p>You haven't added any favorite hymns yet.</p>
-      <a routerLink="/hymns">Browse Hymns</a>
+
+    <a routerLink="/favorites" class="view-all">View all →</a>
+  </div>
+
+  <div class="hymn-card-grid">
+    @for (hymn of FavoriteHymns; track hymn.id) {
+      <a
+        class="hymn-card"
+        [routerLink]="['/hymns', hymn.id]"
+      >
+        <div class="hymn-card-image">
+          <img
+            [src]="'/images/categories/optimized/' + hymn.category.toLowerCase() + '.webp'"
+            alt=""
+            loading="lazy"
+          />
+
+          <span class="hymn-number">
+            Hymn {{ hymn.number }}
+          </span>
+        </div>
+
+        <div class="hymn-card-content">
+          <p class="card-category">{{ hymn.category }}</p>
+
+          <h3>{{ hymn.title }}</h3>
+
+          <p class="card-author">{{ hymn.author }}</p>
+        </div>
+      </a>
+    }
+
+    @empty {
+      <div class="empty-state">
+        <p>You haven't added any favorite hymns yet.</p>
+        <a routerLink="/hymns">Browse Hymns</a>
+      </div>
+    }
+  </div>
+</section>
+<section class="home-section home-categories">
+  <div class="section-heading">
+    <div>
+      <p class="section-label">EXPLORE</p>
+      <h2>Browse by Category</h2>
     </div>
-  }
+
+    <a routerLink="/categories" class="view-all">
+      View all →
+    </a>
+  </div>
+
+  <div class="category-grid">
+    @for (category of categories; track category) {
+      <a
+        class="category-card"
+        [routerLink]="['/categories', category]"
+      >
+        <img
+          [src]="'/images/categories/optimized/' + category.toLowerCase() + '.webp'"
+          alt=""
+          loading="lazy"
+        />
+
+        <div class="category-overlay"></div>
+
+        <div class="category-content">
+          <h3>{{ category }}</h3>
+          <span>Explore hymns →</span>
+        </div>
+      </a>
+    }
+  </div>
 </section>

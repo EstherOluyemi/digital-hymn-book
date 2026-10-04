@@ -24,15 +24,15 @@ body.dark-theme {
   --border: #334155;
 }
 
-body.text-small {
+html:has(body.text-small) {
   font-size: 14px;
 }
 
-body.text-medium {
+html:has(body.text-medium) {
   font-size: 16px;
 }
 
-body.text-large {
+html:has(body.text-large) {
   font-size: 18px;
 }
 

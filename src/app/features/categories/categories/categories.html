@@ -1,13 +1,42 @@
-<section>
-    <h1>Categories</h1>
+<section class="categories-page">
+
+  <header class="categories-header">
+    <p class="section-label">EXPLORE</p>
+    <h1>Browse by Category</h1>
+    <p>
+      Discover hymns for every season of worship and reflection.
+    </p>
+  </header>
+
+  <div class="category-grid">
 
     @for (category of categories; track category) {
-        <div>
-            <h2>{{ category }}</h2>
 
-            <a [routerLink]="['/categories', category]">
-                View Hymns
-            </a>
+      <a
+        class="category-card"
+        [routerLink]="['/categories', category]"
+      >
+
+        <img
+          [src]="'/images/categories/optimized/' + category.toLowerCase() + '.webp'"
+          alt=""
+          loading="lazy"
+        />
+
+        <div class="category-overlay"></div>
+
+        <div class="category-content">
+          <h2>{{ category }}</h2>
+
+          <span>
+            Explore hymns →
+          </span>
         </div>
+
+      </a>
+
     }
+
+  </div>
+
 </section>

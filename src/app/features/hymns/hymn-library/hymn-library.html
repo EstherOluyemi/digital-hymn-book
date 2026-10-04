@@ -1,45 +1,164 @@
-<section>
-    <h2>Hymn Library</h2>
+<section class="library">
 
-    <input type="search"
-    placeholder="Search hymns...."
-    (input)="onSearch($event)">
+  <div class="library-header">
+    <div>
+      <p class="section-label">HYMN COLLECTION</p>
+      <h1>Hymn Library</h1>
+      <p class="library-description">
+        Browse, search and discover hymns from the collection.
+      </p>
+    </div>
+  </div>
 
-    <select (change)="onCategoryChange($event)">
-        <option value="">All Categories</option>
 
-        @for (category of categories; track category) {
-            <option [value]="category">{{ category }}</option>
-        }
+  <div class="library-controls">
+
+    <div class="search-box">
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        width="18"
+        height="18"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="m21 21-4.35-4.35"></path>
+      </svg>
+
+      <input
+        type="search"
+        placeholder="Search hymns..."
+        aria-label="Search hymns"
+        (input)="onSearch($event)"
+      />
+    </div>
+
+
+    <select
+      aria-label="Filter by category"
+      (change)="onCategoryChange($event)"
+    >
+      <option value="">All Categories</option>
+
+      @for (category of categories; track category) {
+        <option [value]="category">
+          {{ category }}
+        </option>
+      }
     </select>
 
-    <select (change)="onSortChange($event)">
-        <option value="number">Sort by Number</option>
-        <option value="title">Sort by Title</option>
+
+    <select
+      aria-label="Sort hymns"
+      (change)="onSortChange($event)"
+    >
+      <option value="number">Sort by Number</option>
+      <option value="title">Sort by Title</option>
     </select>
 
-    @for (hymn of filteredHymns; track hymn.id) {
-        <div>
-            <p>Hymn {{ hymn.number }}</p>
-            <h2>{{ hymn.title }}</h2>
-            <p>{{ hymn.author }}</p>
-            <p>{{ hymn.category }}</p>
+  </div>
 
-            <a [routerLink]="['/hymns', hymn.id]">
-                Open Hymn
-            </a>
 
-            <button
-                type="button"
-                class="favorite-btn"
-                [class.is-favorite]="isFavorite(hymn.id)" //when is true
-                (click)="toggleFavorite(hymn)"
-                >
-                {{ isFavorite(hymn.id) ? 'Remove Favorite' : 'Add Favorite' }}
-            </button>
-        </div>
+  <div class="hymn-table">
+
+    <div class="table-header">
+      <span>#</span>
+      <span>Title</span>
+      <span>Author</span>
+      <span>Category</span>
+      <span class="favorite-column">Favorite</span>
+    </div>
+
+
+    @for (hymn of paginatedHymns; track hymn.id) {
+
+      <div class="hymn-row">
+
+        <span class="hymn-number">
+          {{ hymn.number }}
+        </span>
+
+        <a
+          class="hymn-title"
+          [routerLink]="['/hymns', hymn.id]"
+        >
+          {{ hymn.title }}
+        </a>
+
+        <span class="hymn-author">
+          {{ hymn.author }}
+        </span>
+
+        <span class="category-badge">
+          {{ hymn.category }}
+        </span>
+
+        <button
+          type="button"
+          class="favorite-btn"
+          [class.is-favorite]="isFavorite(hymn.id)"
+          (click)="toggleFavorite(hymn)"
+          [attr.aria-label]="
+            isFavorite(hymn.id)
+              ? 'Remove ' + hymn.title + ' from favorites'
+              : 'Add ' + hymn.title + ' to favorites'
+          "
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="19"
+            height="19"
+            [attr.fill]="isFavorite(hymn.id) ? 'currentColor' : 'none'"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"></path>
+          </svg>
+        </button>
+
+      </div>
+
     }
+
     @empty {
-        <p>No hymns match your search</p>
+
+      <div class="no-results">
+        <h2>No hymns found</h2>
+        <p>Try changing your search or category filter.</p>
+      </div>
+
     }
+    @if (totalPages > 1) {
+    <div class="pagination">
+
+        <button
+        type="button"
+        (click)="previousPage()"
+        [disabled]="currentPage === 1"
+        >
+        ← Previous
+        </button>
+
+        <span class="page-info">
+        Page {{ currentPage }} of {{ totalPages }}
+        </span>
+
+        <button
+        type="button"
+        (click)="nextPage()"
+        [disabled]="currentPage === totalPages"
+        >
+        Next →
+        </button>
+
+    </div>
+    }
+
+  </div>
+
 </section>

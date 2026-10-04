@@ -1,18 +1,98 @@
-<section>
-    <h1>{{ category }} Hymns</h1>
+<section class="category-page">
+
+  <div class="category-hero">
+
+    <img
+      [src]="'/images/categories/optimized/' + category.toLowerCase() + '.webp'"
+      alt=""
+    />
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <a routerLink="/categories" class="back-link">
+        ← All Categories
+      </a>
+
+      <p class="section-label">CATEGORY</p>
+
+      <h1>{{ category }} Hymns</h1>
+
+      <p>
+        {{ hymns.length }} hymns in this collection
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="hymn-list">
+
+    <div class="list-header">
+      <span>#</span>
+      <span>Title</span>
+      <span>Author</span>
+      <span></span>
+    </div>
+
 
     @for (hymn of hymns; track hymn.id) {
-        <div>
-            <p>Hymn {{ hymn.number }}</p>
-            <h2>{{ hymn.title }}</h2>
-            <p>{{ hymn.author }}</p>
 
-            <a [routerLink]="['/hymns', hymn.id]">
-                Open Hymn
-            </a>
-        </div>
+      <div class="hymn-row">
+
+        <span class="hymn-number">
+          {{ hymn.number }}
+        </span>
+
+        <a
+          class="hymn-title"
+          [routerLink]="['/hymns', hymn.id]"
+        >
+          {{ hymn.title }}
+        </a>
+
+        <span class="hymn-author">
+          {{ hymn.author }}
+        </span>
+
+        <a
+          class="open-hymn"
+          [routerLink]="['/hymns', hymn.id]"
+          [attr.aria-label]="'Open ' + hymn.title"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m13 6 6 6-6 6"></path>
+          </svg>
+        </a>
+
+      </div>
+
     }
+
     @empty {
-        <p>No Hymns found in this category</p>
+
+      <div class="empty-state">
+        <h2>No hymns found</h2>
+        <p>There are no hymns available in this category.</p>
+
+        <a routerLink="/categories">
+          Browse Categories
+        </a>
+      </div>
+
     }
+
+  </div>
+
 </section>
