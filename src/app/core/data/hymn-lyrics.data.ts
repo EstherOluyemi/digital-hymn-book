@@ -457,5 +457,109 @@ God in three Persons, blessed Trinity!`
     ``,
 
     ``
+  ],
+
+  takeMyLifeAndLetItBe: [
+    ``,
+
+    ``,
+
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  saviorLikeAShepherdLeadUs: [
+    ``,
+
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  nearerMyGodToThee: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  comeYeThankfulPeopleCome: [
+    ``,
+
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  nowThankWeAllOurGod: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  countYourBlessings: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  forTheBeautyOfTheEarth: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  weGatherTogether: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  praiseGodFromWhomAllBlessingsFlow: [
+    ``
+  ],
+
+  rejoiceYePureInHeart: [
+    ``,
+
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  joyToTheWorld: [
+    ``,
+
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  oComeAllYeFaithful: [
+    ``,
+
+    ``,
+
+    ``
   ]
 };
