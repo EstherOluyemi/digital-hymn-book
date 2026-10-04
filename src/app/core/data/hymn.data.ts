@@ -270,7 +270,7 @@ export const HYMNS: Hymn[] = [
   title: 'Take My Life and Let It Be',
   author: 'Frances R. Havergal',
   category: 'Prayer',
-  verses: []
+  verses: HYMN_LYRICS.takeMyLifeAndLetItBe
 },
 {
   id: 34,
@@ -278,7 +278,7 @@ export const HYMNS: Hymn[] = [
   title: 'Savior, Like a Shepherd Lead Us',
   author: 'Dorothy A. Thrupp',
   category: 'Prayer',
-  verses: []
+  verses: HYMN_LYRICS.saviorLikeAShepherdLeadUs
 },
 {
   id: 35,
@@ -286,7 +286,7 @@ export const HYMNS: Hymn[] = [
   title: 'Nearer, My God, to Thee',
   author: 'Sarah F. Adams',
   category: 'Prayer',
-  verses: []
+  verses: HYMN_LYRICS.nearerMyGodToThee
 },
 // Thanksgiving
 {
@@ -295,7 +295,7 @@ export const HYMNS: Hymn[] = [
   title: 'Come, Ye Thankful People, Come',
   author: 'Henry Alford',
   category: 'Thanksgiving',
-  verses: []
+  verses: HYMN_LYRICS.comeYeThankfulPeopleCome
 },
 {
   id: 37,
@@ -303,7 +303,7 @@ export const HYMNS: Hymn[] = [
   title: 'Now Thank We All Our God',
   author: 'Martin Rinkart / Catherine Winkworth',
   category: 'Thanksgiving',
-  verses: []
+  verses: HYMN_LYRICS.nowThankWeAllOurGod
 },
 {
   id: 38,
@@ -311,7 +311,7 @@ export const HYMNS: Hymn[] = [
   title: 'Count Your Blessings',
   author: 'Johnson Oatman Jr.',
   category: 'Thanksgiving',
-  verses: []
+  verses: HYMN_LYRICS.countYourBlessings
 },
 {
   id: 39,
@@ -319,7 +319,7 @@ export const HYMNS: Hymn[] = [
   title: 'For the Beauty of the Earth',
   author: 'Folliott S. Pierpoint',
   category: 'Thanksgiving',
-  verses: []
+  verses: HYMN_LYRICS.forTheBeautyOfTheEarth
 },
 {
   id: 40,
@@ -327,7 +327,7 @@ export const HYMNS: Hymn[] = [
   title: 'We Gather Together',
   author: 'Traditional Dutch Hymn',
   category: 'Thanksgiving',
-  verses: []
+  verses: HYMN_LYRICS.weGatherTogether
 },
 {
   id: 41,
@@ -335,7 +335,7 @@ export const HYMNS: Hymn[] = [
   title: 'Praise God, from Whom All Blessings Flow',
   author: 'Thomas Ken',
   category: 'Thanksgiving',
-  verses: []
+  verses: HYMN_LYRICS.praiseGodFromWhomAllBlessingsFlow
 },
 {
   id: 42,
@@ -343,7 +343,7 @@ export const HYMNS: Hymn[] = [
   title: 'Rejoice, Ye Pure in Heart',
   author: 'Edward H. Plumptre',
   category: 'Thanksgiving',
-  verses: []
+  verses: HYMN_LYRICS.rejoiceYePureInHeart
 },
 // Christmas
 {
@@ -352,7 +352,7 @@ export const HYMNS: Hymn[] = [
   title: 'Joy to the World',
   author: 'Isaac Watts',
   category: 'Christmas',
-  verses: []
+  verses: HYMN_LYRICS.joyToTheWorld
 },
 {
   id: 44,
@@ -360,7 +360,7 @@ export const HYMNS: Hymn[] = [
   title: 'O Come, All Ye Faithful',
   author: 'John Francis Wade / Frederick Oakeley',
   category: 'Christmas',
-  verses: []
+  verses: HYMN_LYRICS.oComeAllYeFaithful
 },
 {
   id: 45,
