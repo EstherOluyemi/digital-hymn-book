@@ -392,7 +392,7 @@ export const HYMNS: Hymn[] = [
   title: 'The First Noel',
   author: 'Traditional English Carol',
   category: 'Christmas',
-  verses: []
+  verses: HYMN_LYRICS.theFirstNoel
 },
 {
   id: 49,
@@ -426,7 +426,7 @@ export const HYMNS: Hymn[] = [
   title: 'The Strife Is O’er, the Battle Done',
   author: 'Traditional Latin Hymn / Francis Pott',
   category: 'Easter',
-  verses: []
+  verses: HYMN_LYRICS.theStrifeIsOerTheBattleDone
 },
 {
   id: 53,
@@ -434,7 +434,7 @@ export const HYMNS: Hymn[] = [
   title: 'At the Lamb’s High Feast We Sing',
   author: 'Traditional Latin Hymn / Robert Campbell',
   category: 'Easter',
-  verses: []
+  verses: HYMN_LYRICS.atTheLambsHighFeastWeSing
 },
 {
   id: 54,
@@ -442,7 +442,7 @@ export const HYMNS: Hymn[] = [
   title: 'Come, Ye Faithful, Raise the Strain',
   author: 'John of Damascus / John Mason Neale',
   category: 'Easter',
-  verses: []
+  verses: HYMN_LYRICS.comeYeFaithfulRaiseTheStrain
 },
 {
   id: 55,
@@ -458,6 +458,6 @@ export const HYMNS: Hymn[] = [
   title: 'O Sons and Daughters, Let Us Sing',
   author: 'Jean Tisserand / John Mason Neale',
   category: 'Easter',
-  verses: []
+  verses: HYMN_LYRICS.oSonsAndDaughtersLetUsSing
 },
 ];
