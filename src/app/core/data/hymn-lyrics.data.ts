@@ -245,7 +245,7 @@ Perfect in power, in love, in purity.`,
 All Thy works shall praise Thy Name, in earth and sky, and sea;
 Holy, Holy, Holy! merciful and mighty,
 God in three Persons, blessed Trinity!`
-],,
+],
 
   fairestLordJesus: [
     `Fairest Lord Jesus! Ruler of all nature! O Thou of God and man the Son! Thee will I cherish, Thee will I honor, Thou, my soul's glory, joy and crown.`,

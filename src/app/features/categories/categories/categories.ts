@@ -12,4 +12,8 @@ export class Categories {
   private hymnService = inject(HymnService);
 
   categories: string[] = this.hymnService.getCategories();
+
+  getHymnCount(category: string): number {
+    return this.hymnService.getHymnsByCategory(category).length;
+  }
 }
