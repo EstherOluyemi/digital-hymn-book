@@ -73,7 +73,7 @@ export const HYMNS: Hymn[] = [
   title: 'Fairest Lord Jesus',
   author: 'Anonymous / Joseph A. Seiss',
   category: 'Worship',
-  verses: []
+  verses: HYMN_LYRICS.fairestLordJesus
 },
 {
   id: 10,
@@ -81,7 +81,7 @@ export const HYMNS: Hymn[] = [
   title: 'Be Thou My Vision',
   author: 'Traditional Irish Hymn',
   category: 'Worship',
-  verses: []
+  verses: HYMN_LYRICS.beThouMyVision
 },
 {
   id: 11,
@@ -89,7 +89,7 @@ export const HYMNS: Hymn[] = [
   title: 'All Creatures of Our God and King',
   author: 'Francis of Assisi',
   category: 'Worship',
-  verses: []
+  verses: HYMN_LYRICS.allCreaturesOfOurGodAndKing
 },
 {
   id: 12,
@@ -97,7 +97,7 @@ export const HYMNS: Hymn[] = [
   title: 'Come, Thou Almighty King',
   author: 'Anonymous',
   category: 'Worship',
-  verses: []
+  verses: HYMN_LYRICS.comeThouAlmightyKing
 },
 {
   id: 13,
@@ -105,7 +105,7 @@ export const HYMNS: Hymn[] = [
   title: 'Jesus, Thou Joy of Loving Hearts',
   author: 'Bernard of Clairvaux',
   category: 'Worship',
-  verses: []
+  verses: HYMN_LYRICS.jesusThouJoyOfLovingHearts
 },
 {
   id: 14,
@@ -113,7 +113,7 @@ export const HYMNS: Hymn[] = [
   title: 'O Worship the King',
   author: 'Robert Grant',
   category: 'Worship',
-  verses: []
+  verses: HYMN_LYRICS.oWorshipTheKing
 },
 
 // Grace
@@ -123,7 +123,7 @@ export const HYMNS: Hymn[] = [
   title: 'Grace Greater Than Our Sin',
   author: 'Julia H. Johnston',
   category: 'Grace',
-  verses: []
+  verses: HYMN_LYRICS.graceGreaterThanOurSin
 },
 {
   id: 16,
@@ -131,7 +131,7 @@ export const HYMNS: Hymn[] = [
   title: 'Jesus Paid It All',
   author: 'Elvina M. Hall',
   category: 'Grace',
-  verses: []
+  verses: HYMN_LYRICS.jesusPaidItAll
 },
 {
   id: 17,
@@ -139,7 +139,7 @@ export const HYMNS: Hymn[] = [
   title: 'Rock of Ages, Cleft for Me',
   author: 'Augustus M. Toplady',
   category: 'Grace',
-  verses: []
+  verses: HYMN_LYRICS.rockOfAgesCleftForMe
 },
 {
   id: 18,
@@ -147,7 +147,7 @@ export const HYMNS: Hymn[] = [
   title: 'Nothing but the Blood',
   author: 'Robert Lowry',
   category: 'Grace',
-  verses: []
+  verses: HYMN_LYRICS.nothingButTheBlood
 },
 {
   id: 19,
@@ -155,7 +155,7 @@ export const HYMNS: Hymn[] = [
   title: 'Just as I Am, Without One Plea',
   author: 'Charlotte Elliott',
   category: 'Grace',
-  verses: []
+  verses: HYMN_LYRICS.justAsIAmWithoutOnePlea
 },
 {
   id: 20,
@@ -163,7 +163,7 @@ export const HYMNS: Hymn[] = [
   title: 'And Can It Be',
   author: 'Charles Wesley',
   category: 'Grace',
-  verses: []
+  verses: HYMN_LYRICS.andCanItBe
 },
 {
   id: 21,
