@@ -561,5 +561,67 @@ God in three Persons, blessed Trinity!`
     ``,
 
     ``
+  ],
+
+  harkTheHeraldAngelsSing: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  silentNight: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  angelsWeHaveHeardOnHigh: [
+    ``,
+
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  awayInAManger: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  christTheLordIsRisenToday: [
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  jesusChristIsRisenToday: [
+    ``,
+
+    ``,
+
+    ``,
+
+    ``,
+
+    ``
+  ],
+
+  theDayOfResurrection: [
+    ``,
+
+    ``,
+
+    ``
   ]
 };
