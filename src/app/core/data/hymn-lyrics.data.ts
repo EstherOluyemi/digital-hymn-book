@@ -589,107 +589,158 @@ I need Thee, O I need Thee; ev'ry hour I need Thee! O bless me now, my Savior: I
   ],
 
   takeMyLifeAndLetItBe: [
-    ``,
+    `Take my life, and let it be consecrated, Lord, to Thee; take my momensts and my days, let them flow in ceaseless praise.`,
 
-    ``,
+    `Take my hands, and let them move at the impulse of Thy love; take my feet and let them be swift and beautiful for Thee.`,
 
-    ``,
+    `Take my voice, and let me sing always, only, for my King; take my lips, and let them be filled with messages from Thee.`,
 
-    ``,
+    `Take my will, and make it Thine: it shall be no longer mine; take my heart it is Thine own: it shall be Thy royal throne.`,
 
-    ``
+    `Take my love, my Lord, I pour at Thy feet its treasures store; take my self and I will be ever, only, all for Thee!`
+  
   ],
 
   saviorLikeAShepherdLeadUs: [
-    ``,
+    `Savior, like a shepherd lead us, Much we need Thy tender care; In Thy pleasant pastures feed us, For our use Thy folds prepare: Blessed Jesus, blessed Jesus, Thou hast bought us, Thine we are; Blessed Jesus, blessed Jesus, Thou hast bought us, Thine we are.`,
 
-    ``,
+    `We are Thine, do Thou befriend us, Be the Guardian of our way; Keep Thy flock, from sin defend us, Seek us when we go astray: Blessed Jesus, blessed Jesus, Hear Thy children when they pray; Blessed Jesus, blessed Jesus, Hear Thy children when they pray.`,
 
-    ``,
+    `Thou hast promised to receive us, Poor and sinful tho' we be; Thou hast mercy to relieve us, Grace to cleanse, and pow'r to free: Blessed Jesus, blessed Jesus, Early let us turn to Thee; Blessed Jesus, blessed Jesus, Early let us turn to Thee.`,
 
-    ``
+    `Early let us seek Thy favor; Early let us do Thy will; Blessed Lord and only Savior, With Thy love our bosoms fill: Blessed Jesus, blessed Jesus, Thou hast loved us, love us still; Blessed Jesus, blessed Jesus, Thou hast loved us, love us still.`
+  
   ],
 
   nearerMyGodToThee: [
-    ``,
+    `Nearer, my God, to Thee, nearer to Thee; E'en tho' it be a cross that raiseth me, still all my song shall be, nearer, my God, to Thee!`,
 
-    ``,
+    `Tho' like a wandrerer, the sun gone down, darkness be overme, My rest a stone, yet in my dreams I'd be, nearer, my God, to Thee!`,
 
-    ``
+    `Or if, on joyful wing, cleaving the sky, sun, moon and stars forgot, upward I fly, still all my song shall be, nearer, my God, to Thee!`
+  
   ],
 
   comeYeThankfulPeopleCome: [
-    ``,
+    `Come, ye thankful people, come, Raise the song of harvesthome; All is safely gathered in, Ere the winter storms begin; God, our Maker, doth provide For our wants to be supplied; Come to God's own temple, come, Raise the song of harvesthome.`,
 
-    ``,
+    `All the world is God's own field, Fruit unto His praise to yield; Wheat and tares together sown, Unto joy or sorrow grown; First the blade, and then the ear, Then the full corn shall appear: Lord of harvest, grant that we Wholesome grain and pure may be.`,
 
-    ``,
+    `For the Lord our God shall come, And shall take His harvest home; From His field shall in that day All offenses purge away; Give His angels charge at last  In the fire the tares to cast, But the fruitful ears to store In His garner evermore.`,
 
-    ``
+    `Even so, Lord, quickly come To Thy final harvesthome; Gather Thou Thy people in, Free from sorrow, free from sin; There, forever purified, In Thy presence to abide; Come, with all Thine angels, come, Raise the glorious harvesthome.`
+  
   ],
 
   nowThankWeAllOurGod: [
-    ``,
+    `Now thank we all our God With heart and hands and voices, Who wondrous things hath done, In whom His world rejoices; Who from our mother's arms, Hath blest us on our way With countless gifts of love, And still is ours today.`,
 
-    ``,
+    `O may this bounteous God Thru all our life be near us, With ever joyful hearts And blessed peace to cheer us; And keep us in His grace, And guide us when perplexed, And free us from all ills In this world and the next.`,
 
-    ``
+    `All praise and thanks to God The Father now be given, The Son, and Him who reigns With them in highest heaven, The one eternal God, Whom earth and heav'n adore; For thus it was, is now, And shall be evermore.`
+  
   ],
 
   countYourBlessings: [
-    ``,
+    `When upon life's billows you are tempesttossed, When you are discouraged, thinking all is lost, Count your many blessings, name them one by one, And it will surprise you what the Lord hath done.
 
-    ``,
+Refrain:
+Count your blessings, name them one by one; Count your blessings, see what God hath done; Count your blessings, Name them one by one; Count your many blessings, see what God hath done.`,
 
-    ``
+    `Are you ever burdened with a load of care? Does the cross seem heavy you are called to bear? Count your many blessings, ev'ry doubt will fly, And you will be singing as the days go by.
+
+Refrain:
+Count your blessings, name them one by one; Count your blessings, see what God hath done; Count your blessings, Name them one by one; Count your many blessings, see what God hath done.`,
+
+    `So, amid the conflict, whether great or small, Do not be discouraged, God is over all; Count your many blessings, angels will attend, Help and comfort give you to your journey's end.
+
+Refrain:
+Count your blessings, name them one by one; Count your blessings, see what God hath done; Count your blessings, Name them one by one; Count your many blessings, see what God hath done.`
+  
   ],
 
   forTheBeautyOfTheEarth: [
-    ``,
+    `For the beauty of the earth, for the glory of the skies, for the love which from our birth over and around us lies, Lord of all, to Thee we raise this our hymn of grateful praise.
 
-    ``,
+Refrain:
+Lord of all, to Thee we raise this our hymn of grateful praise.`,
 
-    ``
+    `For the joy of human love, brother, sister, parent, child, friends on earth and friends above, for all gentle tho'ts and mild, Lord of all, to Thee we raise this our hymn of grateful praise.
+
+Refrain:
+Lord of all, to Thee we raise this our hymn of grateful praise.`,
+
+    `For Thy church that evermore lifteth holy hands above, off'ring up on ev'ry shore Her pure sacrifice of love, Lord of all, to Thee we raise this our hymn of grateful praise.
+
+Refrain:
+Lord of all, to Thee we raise this our hymn of grateful praise.`
+  
   ],
 
   weGatherTogether: [
-    ``,
+    `We gather together to ask the Lord's blessing; He chastens and hasyens His will to make known; The wicked oppressing now cease from distressing; Sing praises to His Name, He fails not His own!`,
 
-    ``,
+    `Beside us to guide us our God with us joining, Ordaining, maintaining His kingdom divine; So from the beginning the fight we were winning: Lord, Thine be all the glory, The vict'ry is Thine`,
 
-    ``
+    `We all do extol Thee , Thou King of the nation, And pray that Thou still our Defender wilt be; May Thy congregation escape tribulation: Be Thou for ever praised, Thou God of the free!`
+  
   ],
 
   praiseGodFromWhomAllBlessingsFlow: [
-    ``
+    `Praise God from whom all blessings flow; Praise Him, all creatures here below; Praise Him above, ye heav'nly host; Praise Father, Son,  and Holy Ghost.`
+  
   ],
 
   rejoiceYePureInHeart: [
-    ``,
+    `Rejoice, ye pure in heart, Rejoice, give thanks and sing; Your festal banner wave on high, The cross of Christ your King.
 
-    ``,
+Refrain:
+Rejoice, rejoice, rejoice, give thanks and sing!`,
 
-    ``,
+    `With all the angel choirs, With all the saints on earth, Pour out the strains of joy and bliss, True rapture, nobl'est mirth!
 
-    ``
+Refrain:
+Rejoice, rejoice, rejoice, give thanks and sing!`,
+
+    `Yes, on thru life's long path, Still chanting as ye go; From youth to age, by night and day, In gladness and in woe.
+
+Refrain:
+Rejoice, rejoice, rejoice, give thanks and sing!`,
+
+    `Still lift your standard high, Still march in firm array; As warriors thru the darkness toil Till dawns the golden day.
+
+Refrain:
+Rejoice, rejoice, rejoice, give thanks and sing!`
+  
   ],
 
   joyToTheWorld: [
-    ``,
+    `Joy to the world! the Lord is come; Let earth receive her King; Let ev'ry heart prepare Him room, And heav'n and nature sing, And heav'n and nature sing, And heav'n and heav'n and nature sing.`,
 
-    ``,
+    `Joy to the earth! the Savior reigns; Let men their songs employ; While fields and floods, rocks, hills and plains Repeat the sounding joy, Repeat the sounding joy, Repeat, repeat the sounding joy.`,
 
-    ``,
+    `No more let sins and sorrows grow, Nor thorns infest the ground; He comes to make His blessings flow Far as the curse is found, Far as the curse is found, Far as, far as the curse is found.`,
 
-    ``
+    `He rules the world with truth and grace, And makes the nations prove The glories of His righteousness, And wonders of His love, And wonders of His love, And wonders and wonders of His love.`
+  
   ],
 
   oComeAllYeFaithful: [
-    ``,
+    `O come, all ye faithful, joyful and triumphant, O come ye, O come ye to Bethlehem; Come and behold Him, born the King of angels;
 
-    ``,
+Refrain:
+O come, let us adore Him; O come, let us adore Him; O come, let us adore Him, Christ the Lord!`,
 
-    ``
+    `Sing, choirs of angels, sing in exultation, O sing, all ye citizens of heav'n above; Glory to God, all glory in the highest;
+
+Refrain:
+O come, let us adore Him; O come, let us adore Him; O come, let us adore Him, Christ the Lord!`,
+
+    `Yea, Lord, we greet Thee, born this happy morning; Jesus, to Thee be all glory giv'n; Word of the Father, now in flesh appearing;
+
+Refrain:
+O come, let us adore Him; O come, let us adore Him; O come, let us adore Him, Christ the Lord!`
+  
   ],
 
   harkTheHeraldAngelsSing: [
