@@ -368,7 +368,7 @@ export const HYMNS: Hymn[] = [
   title: 'Hark! The Herald Angels Sing',
   author: 'Charles Wesley',
   category: 'Christmas',
-  verses: []
+  verses: HYMN_LYRICS.harkTheHeraldAngelsSing
 },
 {
   id: 46,
@@ -376,7 +376,7 @@ export const HYMNS: Hymn[] = [
   title: 'Silent Night',
   author: 'Joseph Mohr',
   category: 'Christmas',
-  verses: []
+  verses: HYMN_LYRICS.silentNight
 },
 {
   id: 47,
@@ -384,7 +384,7 @@ export const HYMNS: Hymn[] = [
   title: 'Angels We Have Heard on High',
   author: 'Traditional French Carol',
   category: 'Christmas',
-  verses: []
+  verses: HYMN_LYRICS.angelsWeHaveHeardOnHigh
 },
 {
   id: 48,
@@ -400,7 +400,7 @@ export const HYMNS: Hymn[] = [
   title: 'Away in a Manger',
   author: 'Anonymous',
   category: 'Christmas',
-  verses: []
+  verses: HYMN_LYRICS.awayInAManger
 },
 
 // Easter
@@ -410,7 +410,7 @@ export const HYMNS: Hymn[] = [
   title: 'Christ the Lord Is Risen Today',
   author: 'Charles Wesley',
   category: 'Easter',
-  verses: []
+  verses: HYMN_LYRICS.christTheLordIsRisenToday
 },
 {
   id: 51,
@@ -418,7 +418,7 @@ export const HYMNS: Hymn[] = [
   title: 'Jesus Christ Is Risen Today',
   author: 'Traditional Latin Hymn',
   category: 'Easter',
-  verses: []
+  verses: HYMN_LYRICS.jesusChristIsRisenToday
 },
 {
   id: 52,
@@ -450,7 +450,7 @@ export const HYMNS: Hymn[] = [
   title: 'The Day of Resurrection',
   author: 'John of Damascus / John Mason Neale',
   category: 'Easter',
-  verses: []
+  verses: HYMN_LYRICS.theDayOfResurrection
 },
 {
   id: 56,
