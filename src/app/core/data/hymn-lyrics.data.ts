@@ -248,111 +248,162 @@ God in three Persons, blessed Trinity!`
 ],,
 
   fairestLordJesus: [
-    ``,
+    `Fairest Lord Jesus! Ruler of all nature! O Thou of God and man the Son! Thee will I cherish, Thee will I honor, Thou, my soul's glory, joy and crown.`,
 
-    ``,
+    `Fair are the meadows, fairer still the woodlands, robed in the blooming garb of spring, Jesus is fairer, Jesus is purer, who makes the woeful heart to sing.`,
 
-    ``
+    `Fair is the sunshine, fairer still the moonlight, and all the twinkling starry hosts: Jesus shines brighter, Jesus shines purer, than all the angels heav'n can boast.`
+  
   ],
 
   beThouMyVision: [
-    ``,
+    `Be Thou my vision, O Lord of my heart; Naught be all else to me, save that Thou art: Thou my best thought, by day or by night, Waking or sleeping, Thy presence my light.`,
 
-    ``,
+    `Be Thou my wisdom and Thou my true word; I ever with Thee and Thou with me, Lord: Thou my great Father, and I Thy true son, Thou in me dwelling, and I with Thee, one.`,
 
-    ``,
+    `Riches I heed not, nor man's empty praise, Thou my inheritance now and always: Thou and Thou only are first in my heart, High King of heaven, my treasure Thou art.`,
 
-    ``
+    `High King of heaven, my victory won, May I reach heaven's joys, O bright heav'ns Sun! Heart of my own heart, whatever befall, Still be my vision, O Ruler of all.`
+  
   ],
 
   allCreaturesOfOurGodAndKing: [
-    ``,
+    `All creatures of our God and King, lift up your voice and with us sing alleluia! Alleluia! Thou burning sun with golden beam, Thou silver moon with softer gleam, O praise Him, O praise Him! Alleluia! Alleluia! Alleluia!`,
 
-    ``,
+    `Thou rushing wind that art so strong, Ye clouds that sail in heav'n along, o praise Him! Alleluia! Thou rising morn, in praise rejoice; Ye lights of  evening find a voice, O praise Him, O praise Him! Alleluia! Alleluia! Alleluia!`,
 
-    ``,
+    `Thou flowing water, pure and clear, make music for Thy Lord to hear. Alleluia! Alleluia! Thou fire so masterful and bright, that givest man both warmth and light, O praise Him, O praise Him! Alleluia! Alleluia! Alleluia!`,
 
-    ``,
+    `And all ye men of tender heart, forgiving others take your part. O sing ye! Alleluia! Ye who long pain and sorrow bear, praise God and on Him cast your care! O praise Him, O praise Him! Alleluia! Alleluia! Alleluia!`,
 
-    ``
+    `Let all things their Creator bless, and worship Him in humbleness. O praise Him! Alleluia! Praise, praise the Father, praise the Son, and praise the Spirit, three in one! O praise Him, O praise Him! Alleluia! Alleluia! Alleluia!`
+  
   ],
 
   comeThouAlmightyKing: [
-    ``,
+    `Come, Thou almighty King, help us Thy name to sing, help us to praise! Father all glorious, o'er all victorious, come and reign over us, Ancient of Days!`,
 
-    ``,
+    `Come, Thou Incarnate Word, gird on Thy mighty sword, our prayer attend! Come, and Thy people bless, and give Thy word success; Spirit of holiness, on us descend!`,
 
-    ``
+    `O Lord, our God, to Thee the highest praises be, hence, evermore; Thy sov'reign majesty may we in glory see, and to eternity love and adore!`
+  
   ],
 
   jesusThouJoyOfLovingHearts: [
-    ``,
+    `Jesus, Thou joy of loving hearts, Thou fount of life, Thou light of men, from all the bliss that earth imparts we turn unfilled to Thee again.`,
 
-    ``,
+    `Thy truth unchanged hath ever stood; Thou savest those that on Thee call;  to them that seek Thee Thou art good; to them that find Thee, all in all.`,
 
-    ``,
+    `On Thee we feed, Thou living bread, and long to feast upon Thee still; we drink of Thee, Thou fountainhead, whose streams each thirsting soul can fill.`,
 
-    ``
+    `On Jesus, ever with us stay, make all our moments calm and bright; chase the dark night of sin away, shed o'er the world Thy holy light.`
+  
   ],
 
   oWorshipTheKing: [
-    ``,
+    `O worship the King, all glorious above, and greatfully sing His wonderful love; our Shield and Defender, the Ancient of Days, Pavilioned in splendor and girded with praise.`,
 
-    ``,
+    `Thy bountiful care, what tongue can recite? It breathes in the air, it shines in the light; it streams from the hills, it descends to the plain, and sweetly distills in the dew and the rain.`,
 
-    ``
+    `Frail children of dust, and feeble as frail, in Thee do we trust, nor find Thee to fail; Thy mercies, how tender! How firm to the end! Our Maker, Defender, Redeemer, and Friend!`
+  
   ],
 
   graceGreaterThanOurSin: [
-    ``,
+    `Marvelous grace of our loving Lord, Grace that exceeds our sin and our guilt, Yonder on Calvary's mount outpoured, There where the blood of the Lamb was shed.
 
-    ``,
+Refrain:
+Grace, grace, God's grace, Grace that will pardon and cleanse within; Grace, grace, God's grace, Grace that is greater than all our sin.`,
 
-    ``
+    `Dark is the stain that we cannot hide, What can avail to wash it away? Look! there is flowing a crimson tide; Whiter than snow you may be today.
+
+Refrain:
+Grace, grace, God's grace, Grace that will pardon and cleanse within; Grace, grace, God's grace, Grace that is greater than all our sin.`,
+
+    `Marvelous, infinite, matchless grace, Freely bestowed on all who believe; You that are long-ing to see His face, Will you this moment His grace receive?
+
+Refrain:
+Grace, grace, God's grace, Grace that will pardon and cleanse within; Grace, grace, God's grace, Grace that is greater than all our sin.`
+  
   ],
 
   jesusPaidItAll: [
-    ``,
+    `I hear the Savior say, "Thy strength indeed is small; Child of weakness, watch and pray, Find in Me thine all in all."
 
-    ``,
+Refrain:
+Jesus paid it all, All to Him I owe; Sin had left a crimson stain, He washed it white as snow.`,
 
-    ``
+    `Lord, now indeed I find Thy pow'r, and Thine alone, Can change the leper's spots, And melt the heart of stone.
+
+Refrain:
+Jesus paid it all, All to Him I owe; Sin had left a crimson stain, He washed it white as snow.`,
+
+    `And when, before the throne, I stand in Him complete, "Jesus died my soul to save," My lips shall still repeat.
+
+Refrain:
+Jesus paid it all, All to Him I owe; Sin had left a crimson stain, He washed it white as snow.`
+  
   ],
 
   rockOfAgesCleftForMe: [
-    ``,
+    `Rock of Ages, cleft for me, Let me hide myself in Thee; Let the water and the blood, From Thy wounded side which flowed, Be of sin the double cure, Save from wrath and make me pure.`,
 
-    ``,
+    `Could my tears forever flow, Could my zeal no languor know, These for sin could not atone; Thou must save, and Thou alone: In my hand no price I bring, Simply to Thy cross I cling.`,
 
-    ``
+    `While I draw this fleeting breath, When my eyes shall close in death, When I rise to worlds unknown, And behold Thee on Thy throne, Rock of Ages, cleft for me, Let me hide myself in Thee.`
+  
   ],
 
   nothingButTheBlood: [
-    ``,
+    `What can wash away my sins? Nothing but the blood of Jesus; what can make me whole again, nothing but the blood of Jesus.
 
-    ``,
+Refrain:
+O! precious is the flow that makes me white as snow; no other fount I know, nothing but the blood of Jesus.`,
 
-    ``,
+    `For my portion this I see, nothing but the blood of Jesus; for my cleansing, this my plea, nothing but the blood of Jesus.
 
-    ``
+Refrain:
+O! precious is the flow that makes me white as snow; no other fount I know, nothing but the blood of Jesus.`,
+
+    `Nothing can for sin atone, nothing but the blood of Jesus; naught of good that I have done, nothing but the blood of Jesus.
+
+Refrain:
+O! precious is the flow that makes me white as snow; no other fount I know, nothing but the blood of Jesus.`,
+
+    `This is all my hope and peace, nothing but the blood of Jesus; this is all my righteousness, nothing but the blood of Jesus.
+
+Refrain:
+O! precious is the flow that makes me white as snow; no other fount I know, nothing but the blood of Jesus.`
+  
   ],
 
   justAsIAmWithoutOnePlea: [
-    ``,
+    `Just as I am, without one plea, but that thy blood was shed for me, and that thou bids't me come to thee, o lamb, of God, I come, I come.`,
 
-    ``,
+    `Just as I am and waiting not, to rid thy soul of one dark blot, to thee whose blood can cleanse each tho't, o lamb of God I come, I come.`,
 
-    ``,
+    `Just as I am, tho tossed about with many a conflict, many a doubt, fightings and fears, within, without, o lamb of God I come, I come.`,
 
-    ``
+    `Just as I am thou wilt receive, wilt welcome pardon, cleanse relieve, because thy promise I believe, o lamb, of God I come, I come.`
+  
   ],
 
   andCanItBe: [
-    ``,
+    `And can it be that I should gain an int'rest in my Savior's blood? Died He for me, who caused His pain? For me, who scorned, His perfect love.
 
-    ``,
+Refrain:
+Amazing love, how can it be, that You, my God, would die for me. Amazing love, how can it be, that You, my God, would die for me.`,
 
-    ``
+    `You left Your father's throne above, so free, And infinite Your grace; Emptied Yourself of all but love, and bled for Adam's helpless race.
+
+Refrain:
+Amazing love, how can it be, that You, my God, would die for me. Amazing love, how can it be, that You, my God, would die for me.`,
+
+    `Boldly I come before Your throne, to claim Your mercy immense and free; No greater love will e'er be known, for O, my God, it found out me.
+
+Refrain:
+Amazing love, how can it be, that You, my God, would die for me. Amazing love, how can it be, that You, my God, would die for me.`
+  
   ],
 
   beneathTheCrossOfJesus: [
