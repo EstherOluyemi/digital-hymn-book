@@ -407,107 +407,185 @@ Amazing love, how can it be, that You, my God, would die for me. Amazing love, h
   ],
 
   beneathTheCrossOfJesus: [
-    ``,
+    `Beneath the cross of Jesus I fain would take my stand, the shadow of a mighty rock within a weary land; a home within the wilderness, a rest upon the way, from the burning of the noontide heat, and the burden of the day.`,
 
-    ``,
+    `Upon that cross of Jesus mine eye it seems can see the very dying form of One who suffered there for me; and from my smitten heart with tears two wonders I confess, the wonders of His glorious love, and my unworthiness.`,
 
-    ``
+    `I take, o cross, thy shadow for my abiding place; I ask no other sunshine than the sunshine of His face; content to let the world go by, to know no gain or loss, my sinfull self my only shame, my glory all the cross.`
+  
   ],
 
   blessedAssurance: [
-    ``,
+    `Blessed assurance, Jesus is mine! Oh, what a foretaste of glory divine! Heir of salvation, purchase of God, Born of His Spirit, washed in His blood.
 
-    ``,
+Refrain:
+This is my story, this is my song, Praising my Savior all the day long; This is my story, this is my song; Praising my Savior all the day long.`,
 
-    ``
+    `Perfect submission, perfect delight, Visions of rapture now burst on my sight, Angels descending, bring from above, Echoes of mercy, whispers of love.
+
+Refrain:
+This is my story, this is my song, Praising my Savior all the day long; This is my story, this is my song; Praising my Savior all the day long.`,
+
+    `Perfect submission, all is at rest, I, in my Savior am happy and blest, Watching and waiting, looking above, filled with His goodness, lost in His love.
+
+Refrain:
+This is my story, this is my song, Praising my Savior all the day long; This is my story, this is my song; Praising my Savior all the day long.`
+  
   ],
 
   tisSoSweetToTrustInJesus: [
-    ``,
+    `Tis so sweet to trust in Jesus, Just to take Him at His word; Just to rest upon His promise, Just to know, "Thus saith the Lord."
 
-    ``,
+Refrain:
+Jesus, Jesus, how I trust Him; How I've proved Him o'er and o'er! Jesus, Jesus, Precious Jesus! O for grace to trust Him more.`,
 
-    ``,
+    `O how sweet to trust in Jesus, Just to trust His cleansing blood, Just in simple faith to plunge me 'Neath the healing, cleansing flood.
 
-    ``
+Refrain:
+Jesus, Jesus, how I trust Him; How I've proved Him o'er and o'er! Jesus, Jesus, Precious Jesus! O for grace to trust Him more.`,
+
+    `Yes, 'tis sweet to trust in Jesus, Just from sin and self to cease; Just from Jesus simply taking  Life and rest, and joy and peace.
+
+Refrain:
+Jesus, Jesus, how I trust Him; How I've proved Him o'er and o'er! Jesus, Jesus, Precious Jesus! O for grace to trust Him more.`,
+
+    `I'm so glad I learned to trust Thee, Precious Jesus, Savior, Friend; And I know that Thou art with me, Wilt be with me to the end.
+
+Refrain:
+Jesus, Jesus, how I trust Him; How I've proved Him o'er and o'er! Jesus, Jesus, Precious Jesus! O for grace to trust Him more.`
+  
   ],
 
   myFaithLooksUpToThee: [
-    ``,
+    `My faith looks up to Thee, Thou Lamb of Calvary, Savior divine; now hear me while I pray, take all my sins away, o let me from this day be wholy Thine!`,
 
-    ``,
+    `May Thy rich grace impart strength to my fainting heart, my zeal inspire; as Thou hast died for me, o may my love to Thee pure, warm, and changeless be a living fire!`,
 
-    ``
+    `While life's dark maze I tread, and grief around me spread, be Thou my guide; bid darkness turn to day, wipe sorrow's tears away, nor let me ever stay from Thee aside.`
+  
   ],
 
   standingOnThePromises: [
-    ``,
+    `Standing on the promises of Christ my King, Thru eternal ages let His praises ring; Glory in the highest, I will shout and sing,
 
-    ``,
+Refrain:
+Standing on the promises of God. Standing, standing, Standing on the promises of God my Savior; Standing, standing, I'm standing on the promises of God.`,
 
-    ``
+    `Standing on the promises that cannot fail, When the howling storms of doubt and fear assail, By the living word of God I shall prevail,
+
+Refrain:
+Standing on the promises of God. Standing, standing, Standing on the promises of God my Savior; Standing, standing, I'm standing on the promises of God.`,
+
+    `Standing on the promises of Christ the Lord, Bound to Him eternally by love's strong cord, Overcoming daily with the Spirit's sword,
+
+Refrain:
+Standing on the promises of God. Standing, standing, Standing on the promises of God my Savior; Standing, standing, I'm standing on the promises of God.`
+  
   ],
 
   aMightyFortressIsOurGod: [
-    ``,
+    `A mighty fortress is our God, a bulwark never failing; Our helper He, amid the flood of mortal ills prevailing. For still our ancient foe doth seek to work us woe; His craft and pow'r are great, and armed with cruel hate, on earth is not His equal.`,
 
-    ``,
+    `Did we in our own strength confide our striving would be losing; were not the right one on our side the Man of God's own choosing. Dost ask who that may be? Christ Jesus, it is He; Lord Sabaoth His name, from age to age the same, and He must win the battle.`,
 
-    ``
+    `And tho' this world with evil filled, should threaten to undo us; we will not fear, for God hath willed His truth to triumph through us. Let goods and kindred go, this mortal life also; the body they may kill: God's truth abideth still, His kingdom is forever.`
+  
   ],
 
   howFirmAFoundation: [
-    ``,
+    `How firm a foundation ye saints of the Lord, is laid for your faith in his excellent word! What more can he say than to you he has said, you, who unto Jesus for refuge have fled?`,
 
-    ``,
+    `Fear not I am with thee, o be not dismayed; for I am thy God and will still give thee aide; I'll strengthen thee, help thee, and cause thee to stand, upheld by my gracious, omnipotent hand.`,
 
-    ``
+    `The soul, that on Jesus hath leaned for repose, I will not I will not desert to his foes; that soul, tho all hell should endeavor to shake, I'll never, no never, no never forsake.`
+  
   ],
 
   trustAndObey: [
-    ``,
+    `When we walk with the lord in the light of his word what a glory he sheds on our way, while we do his good will, he abides with us still and with all who will trust and obey.
 
-    ``,
+Refrain:
+Trust and obey, for there's no other way to be happy in Jesus, but to trust and obey.`,
 
-    ``,
+    `Not a burden we bear, not a sorrow we share, but our toil he does richly repay; not a grief or a loss, not a frown or a cross, but is blest if we trust and obey.
 
-    ``
+Refrain:
+Trust and obey, for there's no other way to be happy in Jesus, but to trust and obey.`,
+
+    `But we never can prove the delights of his love until all on the alter we lay, for the favor he shows and the joy he bestows are for those who will trust and obey.
+
+Refrain:
+Trust and obey, for there's no other way to be happy in Jesus, but to trust and obey.`,
+
+    `Then in fellowship sweet we will sit at his feet or we'll walk by his side in our way, what he says we will do, where he sends we will know, never fear, only trust and obey.
+
+Refrain:
+Trust and obey, for there's no other way to be happy in Jesus, but to trust and obey.`
+  
   ],
 
   whatAFriendWeHaveInJesus: [
-    ``,
+    `What a friend we have in Jesus, all our sins and griefs to bear; what a privilege to carry ev'rything to God in prayer. O what peace we often forfeit, o what needless pain we bear, all because we do not carry everything to God in prayer.`,
 
-    ``,
+    `Have we trials and temptations? Is there trouble anywhere? We should never be discouraged, take it to the Lord in prayer. Can we find a friend so faithful, who will all our sorrows share? Jesus knows our every weakness, take it to the Lord in prayer.`,
 
-    ``
+    `Are we weak and heavy laden, cumbered with a load of care? Precious Savior, still our refuge take it to the Lord in prayer. Do thy friends despise, forsake you? Take it to the Lord in prayer; in His arms He'll take and shield thee, thou wilt find a solace there.`
+  
   ],
 
   sweetHourOfPrayer: [
-    ``,
+    `Sweet hour of prayer, sweet hour of prayer! That calls me from a world of care, and bids me, at my Father's throne, make all my wants and wishes known. In seasons of distress and grief my soul has often found relief, and oft escaped the tempter's snare, by thy return, sweet hour of prayer.`,
 
-    ``,
+    `Sweet hour of prayer, sweet hour of prayer! The joy I feel, the bliss I share, of those whose anxious spirits burn with strong desires of Thy return. With such I hasten to the place where God, my Savior, shows His face, and gladly take my station there, and wait for Thee, sweet hour of prayer.`,
 
-    ``
+    `Sweet hour of prayer, sweet hour of prayer! Thy wings shall my petition bear to Him whose truth and faithfulness engage the waiting soul to bless. And since He bids me seek His face, believe His word, and trust His grace, I'll cast on Him my every care, and wait for Thee, sweet hour of prayer.`
+  
   ],
 
   passMeNotOGentleSavior: [
-    ``,
+    `Pass me not, O gentle Savior, Hear my humble cry; While on others Thou art calling, Do not pass me by.
 
-    ``,
+Refrain:
+Savior, Savior, Hear my humble cry; While on others Thou art calling, Do not pass me by.`,
 
-    ``,
+    `Trusting only in Thy merit, Would I seek Thy face; Heal my wounded broken spirit, Save me by Thy grace.
 
-    ``
+Refrain:
+Savior, Savior, Hear my humble cry; While on others Thou art calling, Do not pass me by.`,
+
+    `Let me at Thy throne of mercy Find a sweet relief; Kneeling there in deep contrition, Help my unbelief.
+
+Refrain:
+Savior, Savior, Hear my humble cry; While on others Thou art calling, Do not pass me by.`,
+
+    `Thou, the Spring of all my comfort, More than life to me, Whom have I on earth beside Thee? Whom in Heav'n but Thee?
+
+Refrain:
+Savior, Savior, Hear my humble cry; While on others Thou art calling, Do not pass me by.`
+  
   ],
 
   iNeedTheeEveryHour: [
-    ``,
+    `I need Thee every hour, most gracious Lord; no tender voice like Thine can peace afford.
 
-    ``,
+Refrain:
+I need Thee, O I need Thee; ev'ry hour I need Thee! O bless me now, my Savior: I come to Thee!`,
 
-    ``,
+    `I need Thee every hour, stay Thou nearby; temptations lose their power when Thou art nigh.
 
-    ``
+Refrain:
+I need Thee, O I need Thee; ev'ry hour I need Thee! O bless me now, my Savior: I come to Thee!`,
+
+    `I need Thee every hour, in joy or pain; come quickly and abide, or life is vain.
+
+Refrain:
+I need Thee, O I need Thee; ev'ry hour I need Thee! O bless me now, my Savior: I come to Thee!`,
+
+    `I need Thee every hour, most Holy One; O make me Thine indeed, Thou blessed Son!
+
+Refrain:
+I need Thee, O I need Thee; ev'ry hour I need Thee! O bless me now, my Savior: I come to Thee!`
+  
   ],
 
   takeMyLifeAndLetItBe: [
