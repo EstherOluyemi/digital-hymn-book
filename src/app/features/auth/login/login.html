@@ -1,0 +1,26 @@
+<section class="login-page">
+  <h1>Welcome back</h1>
+  <p>Log in to access your favorite hymns.</p>
+
+  <form [formGroup]= "loginForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="email">Email address</label>
+      <input id="email" type="email" formControlName="email">
+    </div>
+
+    <div>
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password">
+    </div>
+
+    @if (errorMessage){
+        <p class="error-message" role="alert">
+            {{ errorMessage }}
+        </p>
+    }
+
+    <button type="submit" [disabled]="loginForm.invalid">
+      Log in
+    </button>
+  </form>
+</section>
