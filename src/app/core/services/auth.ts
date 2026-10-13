@@ -6,6 +6,7 @@ import { Observable, switchMap } from 'rxjs';
 import { LoginRequest, LoginResponse } from '../models/auth.model';
 import { HttpErrorResponse } from '@angular/common/http';
 import { catchError, map, of, tap, throwError, finalize } from 'rxjs';
+import { shareReplay } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -18,6 +19,7 @@ export class Auth {
 
     private readonly _sessionChecked = signal(false);
     readonly sessionChecked = this._sessionChecked.asReadonly();
+    private sessionRequest$: Observable<User | null> | null = null;
 
     register(data: RegisterRequest) {
         return this.getCsrfToken().pipe(
@@ -31,14 +33,20 @@ export class Auth {
     }
 
     getCurrentUser(): Observable<User | null> {
-        return this.http.get<{
+        if (this.sessionRequest$) {
+            return this.sessionRequest$;
+        }
+
+        this.sessionRequest$ = this.http.get<{
             success: boolean;
             data: {
             user: User;
             };
         }>(`${this.apiUrl}/auth/me`).pipe(
             map(response => response.data.user),
+
             tap(user => this._currentUser.set(user)),
+
             catchError(error => {
             if (error instanceof HttpErrorResponse && error.status === 401) {
                 this._currentUser.set(null);
@@ -47,8 +55,16 @@ export class Auth {
 
             return throwError(() => error);
             }),
-            finalize(() => this._sessionChecked.set(true))
+
+            finalize(() => {
+            this._sessionChecked.set(true);
+            this.sessionRequest$ = null;
+            }),
+
+            shareReplay({ bufferSize: 1, refCount: false })
         );
+
+        return this.sessionRequest$;
     }
 
     getCsrfToken(){

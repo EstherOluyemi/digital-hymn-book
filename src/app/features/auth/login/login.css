@@ -123,6 +123,13 @@
   text-decoration: underline;
 }
 
+.field-error {
+  color: #dc2626;
+  font-size: 0.8rem;
+  margin-top: 0.35rem;
+  line-height: 1.4;
+}
+
 @media (max-width: 700px) {
   .login-page {
     width: calc(100% - 2rem);

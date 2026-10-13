@@ -19,6 +19,7 @@ export class Login {
   private router = inject(Router);
   errorMessage = '';
   showPassword = false;
+  isLoading = false;
 
   loginForm = this.fb.nonNullable.group({
     email: ['', [Validators.required, Validators.email]],
@@ -26,10 +27,15 @@ export class Login {
   });
 
   onSubmit() {
-      if (this.loginForm.invalid) return;
+      if (this.loginForm.invalid || this.isLoading) return;
+      
+      this.errorMessage = '';
+      this.isLoading = true;
 
       this.authService.login(this.loginForm.getRawValue()).subscribe({
         next: (response) => {
+          this.isLoading = false;
+
           if (response.success && response.data?.user) {
             this.authService.setCurrentUser(response.data.user);
             console.log('Login successful');
@@ -41,6 +47,8 @@ export class Login {
         },
 
         error: (error: HttpErrorResponse) => {
+          this.isLoading = false;
+
           if (error.status === 401) {
             this.errorMessage = 'Login failed. Please check your details or try again.';
           } else {

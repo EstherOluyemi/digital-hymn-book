@@ -89,6 +89,8 @@
         </svg>
       </a>
       @if (!authService.sessionChecked()) {
+      <!-- Wait for the initial session check -->
+    } @else if (authService.currentUser()) {
       <button
         type="button"
         class="logout-btn"
@@ -97,7 +99,7 @@
       >
         {{ isLoggingOut ? 'Logging out...' : 'Log out' }}
       </button>
-    } @else if (authService.currentUser()) {
+    } @else {
       <a routerLink="/login" class="login-link">
         Log in
       </a>

@@ -5,7 +5,24 @@
   <form [formGroup]= "loginForm" (ngSubmit)="onSubmit()">
     <div>
       <label for="email">Email address</label>
-      <input id="email" type="email" formControlName="email">
+
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        [attr.aria-invalid]="loginForm.controls.email.invalid && loginForm.controls.email.touched"
+        [attr.aria-describedby]="loginForm.controls.email.touched && loginForm.controls.email.invalid ? 'email-error' : null"
+      />
+
+      @if (loginForm.controls.email.touched && loginForm.controls.email.hasError('required')) {
+        <p id="email-error" class="field-error">
+          Email address is required.
+        </p>
+      } @else if (loginForm.controls.email.touched && loginForm.controls.email.hasError('email')) {
+        <p id="email-error" class="field-error">
+          Please enter a valid email address.
+        </p>
+      }
     </div>
 
     <div>
@@ -16,6 +33,8 @@
           id="password"
           [type]="showPassword ? 'text' : 'password'"
           formControlName="password"
+          [attr.aria-invalid]="loginForm.controls.password.invalid && loginForm.controls.password.touched"
+          [attr.aria-describedby]="loginForm.controls.password.touched && loginForm.controls.password.invalid ? 'password-error' : null"
         />
 
         <button
@@ -28,6 +47,11 @@
           {{ showPassword ? 'Hide' : 'Show' }}
         </button>
       </div>
+      @if (loginForm.controls.password.touched && loginForm.controls.password.hasError('required')) {
+      <p id="password-error" class="field-error">
+        Password is required.
+      </p>
+    }
     </div>
 
     @if (errorMessage){
@@ -36,8 +60,8 @@
         </p>
     }
 
-    <button type="submit" [disabled]="loginForm.invalid">
-      Log in
+    <button type="submit" [disabled]="isLoading">
+      {{ isLoading ? 'Logging in...' : 'Log in' }}
     </button>
   </form>
   <p class="auth-footer">
