@@ -113,6 +113,41 @@
   background: var(--surface-soft);
 }
 
+.logout-btn,
+.login-link {
+  padding: 0.55rem 1rem;
+  border-radius: 7px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logout-btn {
+  background: var(--primary);
+  color: white;
+  border: 1px solid var(--primary);
+}
+
+.logout-btn:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.logout-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-link {
+  color: var(--primary);
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.login-link:hover {
+  background: var(--surface-soft);
+}
+
 /* MOBILE */
 
 @media (max-width: 700px) {

@@ -3,8 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { RegisterRequest, RegisterResponse, User } from '../models/auth.model';
 import { Observable, switchMap } from 'rxjs';
-import { HttpHeaders } from '@angular/common/http';
-import { LoginRequest } from '../models/auth.model';
+import { LoginRequest, LoginResponse } from '../models/auth.model';
 import { HttpErrorResponse } from '@angular/common/http';
 import { catchError, map, of, tap, throwError, finalize } from 'rxjs';
 
@@ -61,10 +60,10 @@ export class Auth {
         }>(`${this.apiUrl}/auth/csrf-token`);
     }
 
-    login(data: LoginRequest): Observable<unknown> {
+    login(data: LoginRequest): Observable<LoginResponse> {
         return this.getCsrfToken().pipe(
             switchMap((response) => {
-            return this.http.post<unknown>(
+            return this.http.post<LoginResponse>(
                 `${this.apiUrl}/auth/login`,
                 data,
                 {
@@ -77,9 +76,18 @@ export class Auth {
         );
     }
     logout(): Observable<unknown> {
-        return this.http.post<unknown>(
-            `${this.apiUrl}/auth/logout`,
-            {}
+        return this.getCsrfToken().pipe(
+            switchMap((response) =>
+            this.http.post<unknown>(
+                `${this.apiUrl}/auth/logout`,
+                {},
+                {
+                headers: {
+                    'X-CSRF-Token': response.data.csrfToken
+                }
+                }
+            )
+            )
         );
     }
 

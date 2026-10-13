@@ -10,7 +10,24 @@
 
     <div>
       <label for="password">Password</label>
-      <input id="password" type="password" formControlName="password">
+
+      <div class="password-field">
+        <input
+          id="password"
+          [type]="showPassword ? 'text' : 'password'"
+          formControlName="password"
+        />
+
+        <button
+          type="button"
+          class="password-toggle"
+          (click)="showPassword = !showPassword"
+          [attr.aria-label]="showPassword ? 'Hide password' : 'Show password'"
+          [attr.aria-pressed]="showPassword"
+        >
+          {{ showPassword ? 'Hide' : 'Show' }}
+        </button>
+      </div>
     </div>
 
     @if (errorMessage){
@@ -23,4 +40,8 @@
       Log in
     </button>
   </form>
+  <p class="auth-footer">
+    Don't have an account?
+    <a routerLink="/register">Create an account</a>
+  </p>
 </section>

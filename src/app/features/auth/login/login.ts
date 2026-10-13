@@ -4,9 +4,11 @@ import { Auth } from '../../../core/services/auth';
 import { email } from '@angular/forms/signals';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterLink],
   selector: 'app-login',
   styleUrl: './login.css',
   templateUrl: './login.html',
@@ -14,7 +16,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class Login {
   private fb = inject(FormBuilder);
   private authService = inject(Auth);
+  private router = inject(Router);
   errorMessage = '';
+  showPassword = false;
 
   loginForm = this.fb.nonNullable.group({
     email: ['', [Validators.required, Validators.email]],
@@ -22,19 +26,27 @@ export class Login {
   });
 
   onSubmit() {
-    if (this.loginForm.invalid) return;
+      if (this.loginForm.invalid) return;
 
-    this.authService.login(this.loginForm.getRawValue()). subscribe({
-      next: () => {
-        console.log('Login successful');
-      },
-      error: (error: HttpErrorResponse) => {
-        if (error.status === 401) {
-          this.errorMessage = 'Login failed. Please check your details or try again.';
-        }else{
-          this.errorMessage = 'Something went wrong. Please try again later.';
+      this.authService.login(this.loginForm.getRawValue()).subscribe({
+        next: (response) => {
+          if (response.success && response.data?.user) {
+            this.authService.setCurrentUser(response.data.user);
+            console.log('Login successful');
+
+            this.router.navigate(['/']);
+          } else {
+            this.errorMessage = response.message || 'Login failed. Please try again.';
+          }
+        },
+
+        error: (error: HttpErrorResponse) => {
+          if (error.status === 401) {
+            this.errorMessage = 'Login failed. Please check your details or try again.';
+          } else {
+            this.errorMessage = 'Something went wrong. Please try again later.';
+          }
         }
-      }
-    });
-  }
+      });
+    }
 }

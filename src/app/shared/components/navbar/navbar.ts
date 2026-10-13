@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { Auth } from '../../../core/services/auth';
 
 @Component({
   imports: [RouterLink, RouterLinkActive],
@@ -7,4 +8,27 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './navbar.css',
   templateUrl: './navbar.html',
 })
-export class Navbar {}
+export class Navbar {
+  authService = inject(Auth);
+  private router = inject(Router);
+
+  isLoggingOut = false;
+
+  onLogout() {
+    if (this.isLoggingOut) return;
+
+    this.isLoggingOut = true;
+
+    this.authService.logout().subscribe({
+      next: () => {
+        this.authService.setCurrentUser(null);
+        this.isLoggingOut = false;
+        this.router.navigate(['/login']);
+      },
+      error: (error) => {
+        console.error('Logout failed:', error);
+        this.isLoggingOut = false;
+      }
+    });
+  }
+}
