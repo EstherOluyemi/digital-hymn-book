@@ -21,16 +21,21 @@ export class Auth {
     readonly sessionChecked = this._sessionChecked.asReadonly();
     private sessionRequest$: Observable<User | null> | null = null;
 
-    register(data: RegisterRequest) {
+    register(data: RegisterRequest): Observable<RegisterResponse> {
         return this.getCsrfToken().pipe(
-            switchMap(() => {
+            switchMap((response) => {
             return this.http.post<RegisterResponse>(
                 `${this.apiUrl}/auth/register`,
-                data
+                data,
+                {
+                headers: {
+                    'X-CSRF-Token': response.data.csrfToken
+                }
+                }
             );
             })
         );
-    }
+        }
 
     getCurrentUser(): Observable<User | null> {
         if (this.sessionRequest$) {

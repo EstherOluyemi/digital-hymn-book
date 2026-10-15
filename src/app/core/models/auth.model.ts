@@ -33,3 +33,38 @@ export interface LoginResponse {
     user: User;
   };
 }
+
+export interface BackendVerse {
+  number: number;
+  lines: string[];
+  englishLines?: string[];
+}
+
+export interface BackendHymn {
+  id: string;
+  number: number;
+  title: string;
+  alternateTitle?: string;
+  category: string;
+  author: string;
+  verses: BackendVerse[];
+  chorus?: string[];
+  englishChorus?: string[];
+  tags?: string[];
+  meter?: string;
+  tune?: string;
+  key?: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FavoriteRecord {
+  id: string;
+  hymn: BackendHymn;
+  createdAt: string;
+}
+
+export interface FavoritesResponse {
+  success: boolean;
+  data: FavoriteRecord[];
+}

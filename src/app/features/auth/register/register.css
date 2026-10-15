@@ -1,0 +1,163 @@
+
+.register-page {
+  width: min(100%, 440px);
+  margin: 4rem auto;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.register-page h1 {
+  color: var(--text);
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.register-page > p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.register-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.register-page form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.register-page label {
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.register-page input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+
+.register-page input:focus {
+  outline: 2px solid rgba(37, 99, 235, 0.15);
+  border-color: var(--primary);
+}
+
+/* Submit button */
+
+.register-page button[type="submit"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-top: 0.5rem;
+
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 7px;
+
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.register-page button[type="submit"]:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.register-page button[type="submit"]:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Password visibility toggle */
+
+.register-page .password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.register-page .password-field input {
+  padding-right: 4.5rem;
+}
+
+.register-page .password-toggle {
+  position: absolute;
+  right: 0.75rem;
+
+  border: none;
+  background: transparent;
+  color: var(--primary);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-page .password-toggle:hover {
+  text-decoration: underline;
+}
+
+/* Validation and feedback messages */
+
+.register-page .field-error {
+  color: #dc2626;
+  font-size: 0.8rem;
+  margin-top: 0.35rem;
+  line-height: 1.4;
+}
+
+.register-page .error-message {
+  color: #dc2626;
+  font-size: 0.85rem;
+}
+
+.register-page .success-message {
+  color: #15803d;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Login link */
+
+.register-page .auth-footer {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.register-page .auth-footer a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-page .auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 700px) {
+  .register-page {
+    width: calc(100% - 2rem);
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+}

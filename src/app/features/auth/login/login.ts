@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Auth } from '../../../core/services/auth';
-import { email } from '@angular/forms/signals';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -20,6 +19,7 @@ export class Login {
   errorMessage = '';
   showPassword = false;
   isLoading = false;
+  registrationSuccess = false;
 
   loginForm = this.fb.nonNullable.group({
     email: ['', [Validators.required, Validators.email]],
@@ -57,4 +57,12 @@ export class Login {
         }
       });
     }
+
+    constructor() {
+      const navigation = this.router.currentNavigation();
+
+      this.registrationSuccess =
+        navigation?.extras.state?.['registrationSuccess'] === true;
+    }
 }
+

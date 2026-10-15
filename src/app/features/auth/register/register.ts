@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators, ɵInternalFormsSharedModule } from '@angular/forms';
-import { email } from '@angular/forms/signals';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Auth } from '../../../core/services/auth';
+import { RouterLink, Router } from '@angular/router';
 
 @Component({
-  imports: [ɵInternalFormsSharedModule, ReactiveFormsModule],
+  imports: [ ReactiveFormsModule, RouterLink],
   selector: 'app-register',
   styleUrl: './register.css',
   templateUrl: './register.html',
@@ -12,6 +12,11 @@ import { Auth } from '../../../core/services/auth';
 export class Register {
   private fb = inject(FormBuilder);
   private authService = inject(Auth);
+  private router = inject(Router);
+  isLoading = false;
+  errorMessage = '';
+  successMessage = '';
+  showPassword = false;
 
   registerForm = this.fb.nonNullable.group({
     name: ['', [
@@ -31,21 +36,47 @@ export class Register {
     ]]
   });
 
-  onSubmit(){
-    if(this.registerForm.invalid){
-      return;
-    }
-    const formData = this.registerForm.getRawValue();
-
-    this.authService.register(formData).subscribe({
-      next: (response) => {
-        console.log('Registration successful:', response.message);
-      },
-      error: (error) => {
-        console.error('Registration failed:', error);
+  onSubmit() {
+      if (this.registerForm.invalid || this.isLoading) {
+        return;
       }
-    });
-  }
+
+      this.isLoading = true;
+      this.errorMessage = '';
+      this.successMessage = '';
+
+      const formData = this.registerForm.getRawValue();
+
+      this.authService.register(formData).subscribe({
+        next: (response) => {
+          this.isLoading = false;
+
+          if (response.success) {
+              this.registerForm.reset();
+              this.router.navigate(['/login'], {
+                state: {
+                  registrationSuccess: true
+                }
+              });
+            } else {
+            this.errorMessage =
+              response.message || 'Registration failed. Please try again.';
+          }
+        },
+
+        error: (error) => {
+          this.isLoading = false;
+
+          if (error.status === 409) {
+            this.errorMessage =
+              'An account with this email already exists.';
+          } else {
+            this.errorMessage =
+              'Something went wrong. Please try again later.';
+          }
+        }
+      });
+    }
 
   checkSession(){
     this.authService.getCurrentUser().subscribe({
