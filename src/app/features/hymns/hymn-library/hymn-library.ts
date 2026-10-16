@@ -1,10 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { HymnService } from '../../../core/services/hymn';
 import { Hymn } from '../../../core/models/hymn.model';
 import { RouterLink } from '@angular/router';
 import { FavoritesService } from '../../../core/services/favorites';
 import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   imports: [RouterLink],
@@ -12,7 +13,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   styleUrl: './hymn-library.css',
   templateUrl: './hymn-library.html',
 })
-export class HymnLibrary {
+export class HymnLibrary implements OnInit{
   private hymnService = inject(HymnService);
   private favoriteService = inject(FavoritesService);
   private searchSubject = new Subject<string>();
@@ -27,6 +28,18 @@ export class HymnLibrary {
 
   hymns: Hymn[] = this.hymnService.getHymns();
   filteredHymns: Hymn[] = this.hymnService.getHymns();
+
+  ngOnInit(): void {
+    this.hymnService.getBackendHymns().subscribe({
+      next: (response) => {
+        console.log('Backend hymns:', response.data);
+        console.log('Backend pagination:', response.pagination);
+      },
+      error: (error: HttpErrorResponse) => {
+        console.error('Failed to fetch backend hymns:', error);
+      }
+    });
+  }
 
   applyFilters() {
   this.filteredHymns = this.hymns.filter(hymn => {
@@ -50,11 +63,11 @@ export class HymnLibrary {
   this.filteredHymns.sort((a, b) => a.number - b.number);
 }
 
-if (this.sortOption === 'title') {
-  this.filteredHymns.sort((a, b) =>
-    a.title.localeCompare(b.title)
-  );
-}
+  if (this.sortOption === 'title') {
+    this.filteredHymns.sort((a, b) =>
+      a.title.localeCompare(b.title)
+    );
+  }
   this.currentPage = 1;
   }
 

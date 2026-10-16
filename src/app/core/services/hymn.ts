@@ -1,9 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Hymn } from '../models/hymn.model';
 import { HYMNS } from '../data/hymn.data';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
+import { HymnsResponse } from '../models/auth.model';
 
 @Injectable({ providedIn: 'root' })
 export class HymnService {
+
+    private http = inject(HttpClient);
+    private apiUrl = environment.apiUrl;
+
     getHymns(): Hymn[]{
         return HYMNS;
     }
@@ -56,6 +63,12 @@ export class HymnService {
         const hymnIndex = dayOfYear % HYMNS.length;
 
         return HYMNS[hymnIndex];
-        }
+    }
+
+    getBackendHymns() {
+        return this.http.get<HymnsResponse>(
+            `${this.apiUrl}/hymns`
+        );
+    }
 }
  

@@ -68,3 +68,18 @@ export interface FavoritesResponse {
   success: boolean;
   data: FavoriteRecord[];
 }
+
+export interface HymnPagination {
+  page: number;
+  limit: number;
+  total: number;
+  totalPages: number;
+  hasNextPage: boolean;
+  hasPreviousPage: boolean;
+}
+
+export interface HymnsResponse {
+  success: boolean;
+  data: BackendHymn[];
+  pagination: HymnPagination;
+}

@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Hymn } from '../models/hymn.model';
 import { FavoritesResponse, FavoriteRecord } from '../models/auth.model';
 import { environment } from '../../../environments/environment';
-import { tap } from 'rxjs';
+import { tap, switchMap } from 'rxjs';
+import { AuthService } from './auth';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,7 @@ export class FavoritesService {
 
   private http = inject(HttpClient);
   private apiUrl = environment.apiUrl;
+  private authService = inject(AuthService);
 
   private favoriteHymns = signal<Hymn[]>(
     this.loadFavorites()
@@ -67,7 +69,6 @@ export class FavoritesService {
   }
 
   // BACKEND API
-
   getUserFavorites() {
     return this.http.get<FavoritesResponse>(
         `${this.apiUrl}/users/me/favorites`
@@ -77,4 +78,10 @@ export class FavoritesService {
         })
     );
     }
+
+    removeUserFavorite(hymnId: string) {
+    return this.http.delete(
+      `${this.apiUrl}/users/me/favorites/${hymnId}`
+    );
+  }
 }
