@@ -4,16 +4,6 @@
     <h1>Favorite Hymns</h1>
     <p>Keep the hymns you love close at hand.</p>
   </header>
-  <h2>Backend Favorites</h2>
-
-  @for (favorite of backendFavorites(); track favorite.id) {
-    <p>
-      {{ favorite.hymn.number }} —
-      {{ favorite.hymn.title }}
-    </p>
-  } @empty {
-    <p>No backend favorites yet.</p>
-  }
 
   @if (favoriteHymns.length > 0) {
     <div class="favorites-list">

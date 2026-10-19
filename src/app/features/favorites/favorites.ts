@@ -1,7 +1,6 @@
 
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { HttpErrorResponse } from '@angular/common/http';
 import { FavoritesService } from '../../core/services/favorites';
 
 @Component({
@@ -10,9 +9,8 @@ import { FavoritesService } from '../../core/services/favorites';
   styleUrl: './favorites.css',
   templateUrl: './favorites.html',
 })
-export class Favorites implements OnInit {
+export class Favorites {
   private favouritesService = inject(FavoritesService);
-  readonly backendFavorites = this.favouritesService.backendFavorites;
 
   get favoriteHymns() {
     return this.favouritesService.getFavorites();
@@ -22,14 +20,4 @@ export class Favorites implements OnInit {
     this.favouritesService.removeFavorites(id);
   }
 
-  ngOnInit() {
-    this.favouritesService.getUserFavorites().subscribe({
-      next: (response) => {
-        console.log('Backend favorites:', response.data);
-      },
-      error: (error: HttpErrorResponse) => {
-        console.error('Failed to fetch favorites:', error);
-      }
-    });
-  }
 }

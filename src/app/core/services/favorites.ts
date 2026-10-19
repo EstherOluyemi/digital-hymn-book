@@ -4,7 +4,7 @@ import { Hymn } from '../models/hymn.model';
 import { FavoritesResponse, FavoriteRecord } from '../models/auth.model';
 import { environment } from '../../../environments/environment';
 import { tap, switchMap } from 'rxjs';
-import { AuthService } from './auth';
+import { Auth } from './auth';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class FavoritesService {
 
   private http = inject(HttpClient);
   private apiUrl = environment.apiUrl;
-  private authService = inject(AuthService);
+  private authService = inject(Auth);
 
   private favoriteHymns = signal<Hymn[]>(
     this.loadFavorites()
@@ -79,9 +79,34 @@ export class FavoritesService {
     );
     }
 
+    addUserFavorite(hymnId: string) {
+      return this.authService.getCsrfToken().pipe(
+        switchMap((response) => {
+          return this.http.post(
+            `${this.apiUrl}/users/me/favorites/${hymnId}`,
+            {},
+            {
+              headers: {
+                'X-CSRF-Token': response.data.csrfToken
+              }
+            }
+          );
+        })
+      );
+    }
+
     removeUserFavorite(hymnId: string) {
-    return this.http.delete(
-      `${this.apiUrl}/users/me/favorites/${hymnId}`
-    );
-  }
+      return this.authService.getCsrfToken().pipe(
+        switchMap((response) => {
+          return this.http.delete(
+            `${this.apiUrl}/users/me/favorites/${hymnId}`,
+            {
+              headers: {
+                'X-CSRF-Token': response.data.csrfToken
+              }
+            }
+          );
+        })
+      );
+    }
 }

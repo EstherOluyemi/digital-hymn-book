@@ -1,4 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { 
+  Component,
+  inject,
+  viewChild,
+  ElementRef,
+  afterNextRender
+ } from '@angular/core';
+import { environment } from '../../../../environments/environment';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Auth } from '../../../core/services/auth';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -20,6 +27,7 @@ export class Login {
   showPassword = false;
   isLoading = false;
   registrationSuccess = false;
+  googleButton = viewChild<ElementRef<HTMLDivElement>>('googleButton');
 
   loginForm = this.fb.nonNullable.group({
     email: ['', [Validators.required, Validators.email]],
@@ -58,11 +66,39 @@ export class Login {
       });
     }
 
+    private initializeGoogleButton(): void {
+      const google = window.google;
+      const buttonElement = this.googleButton()?.nativeElement;
+
+      if (!google || !buttonElement) {
+        console.warn('Google Sign-In is not ready.');
+        return;
+      }
+
+      google.accounts.id.initialize({
+        client_id: environment.googleClientId,
+        callback: (response: { credential: string }) => {
+          console.log('Google credential received');
+        }
+      });
+
+      google.accounts.id.renderButton(buttonElement, {
+        theme: 'outline',
+        size: 'large',
+        text: 'signin_with',
+        width: 280
+      });
+    }
+
     constructor() {
       const navigation = this.router.currentNavigation();
 
       this.registrationSuccess =
         navigation?.extras.state?.['registrationSuccess'] === true;
+
+      afterNextRender(() => {
+        this.initializeGoogleButton();
+      });
     }
 }
 

@@ -115,4 +115,20 @@ export class Auth {
     setCurrentUser(user: User | null): void {
         this._currentUser.set(user);
     }
+
+    googleLogin(idToken: string): Observable<LoginResponse> {
+        return this.getCsrfToken().pipe(
+            switchMap((response) => {
+            return this.http.post<LoginResponse>(
+                `${this.apiUrl}/auth/google`,
+                { idToken },
+                {
+                headers: {
+                    'X-CSRF-Token': response.data.csrfToken
+                }
+                }
+            );
+            })
+        );
+    }
 }

@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { HymnService } from '../../../core/services/hymn';
 import { Hymn } from '../../../core/models/hymn.model';
 import { RouterLink } from '@angular/router';
@@ -13,7 +13,7 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrl: './hymn-library.css',
   templateUrl: './hymn-library.html',
 })
-export class HymnLibrary implements OnInit{
+export class HymnLibrary {
   private hymnService = inject(HymnService);
   private favoriteService = inject(FavoritesService);
   private searchSubject = new Subject<string>();
@@ -28,18 +28,6 @@ export class HymnLibrary implements OnInit{
 
   hymns: Hymn[] = this.hymnService.getHymns();
   filteredHymns: Hymn[] = this.hymnService.getHymns();
-
-  ngOnInit(): void {
-    this.hymnService.getBackendHymns().subscribe({
-      next: (response) => {
-        console.log('Backend hymns:', response.data);
-        console.log('Backend pagination:', response.pagination);
-      },
-      error: (error: HttpErrorResponse) => {
-        console.error('Failed to fetch backend hymns:', error);
-      }
-    });
-  }
 
   applyFilters() {
   this.filteredHymns = this.hymns.filter(hymn => {
