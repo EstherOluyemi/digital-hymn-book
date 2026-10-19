@@ -78,7 +78,7 @@ export class Login {
       google.accounts.id.initialize({
         client_id: environment.googleClientId,
         callback: (response: { credential: string }) => {
-          console.log('Google credential received');
+          this.onGoogleLogin(response.credential);
         }
       });
 
@@ -91,13 +91,59 @@ export class Login {
     }
 
     constructor() {
-      const navigation = this.router.currentNavigation();
+        const navigation = this.router.currentNavigation();
 
-      this.registrationSuccess =
-        navigation?.extras.state?.['registrationSuccess'] === true;
+        this.registrationSuccess =
+          navigation?.extras.state?.['registrationSuccess'] === true;
 
-      afterNextRender(() => {
-        this.initializeGoogleButton();
+        afterNextRender(() => {
+        if (window.google) {
+          this.initializeGoogleButton();
+          return;
+        }
+
+        const googleScript = document.querySelector<HTMLScriptElement>(
+          'script[src="https://accounts.google.com/gsi/client"]'
+        );
+
+        googleScript?.addEventListener(
+          'load',
+          () => this.initializeGoogleButton(),
+          { once: true }
+        );
+      });
+        }
+
+      onGoogleLogin(idToken: string): void {
+      if (this.isLoading) return;
+
+      this.errorMessage = '';
+      this.isLoading = true;
+
+      this.authService.googleLogin(idToken).subscribe({
+        next: (response) => {
+          this.isLoading = false;
+
+          if (response.success && response.data?.user) {
+            this.authService.setCurrentUser(response.data.user);
+            this.router.navigate(['/']);
+          } else {
+            this.errorMessage =
+              response.message || 'Google login failed. Please try again.';
+          }
+        },
+
+        error: (error: HttpErrorResponse) => {
+          this.isLoading = false;
+
+          if (error.status === 400 || error.status === 401) {
+            this.errorMessage =
+              'Google authentication failed. Please try signing in again.';
+          } else {
+            this.errorMessage =
+              'Something went wrong. Please try again later.';
+          }
+        }
       });
     }
 }

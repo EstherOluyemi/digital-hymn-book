@@ -125,5 +125,11 @@
         Thank you! Your hymn suggestion has been submitted.
       </p>
     }
+
+  @if (errorMessage) {
+    <p class = "error-message" role="alert">
+      {{ errorMessage }}
+    </p>
+  }
   </form>
 </section>
