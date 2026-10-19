@@ -5,6 +5,19 @@
     <p>Customize your hymn book experience.</p>
   </header>
 
+  @if (isLoading) {
+    <p role="status">Loading your preferences...</p>
+  }
+  @if (isSaving) {
+    <p role="status">Saving preferences...</p>
+  }
+  @if (feedback) {
+    <p role="status">{{ feedback }}</p>
+  }
+  @if (errorMessage) {
+    <p role="alert">{{ errorMessage }}</p>
+  }
+
   <div class="settings-card">
     <div class="setting-group">
       <div class="setting-heading">
