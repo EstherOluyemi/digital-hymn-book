@@ -95,7 +95,7 @@
 
         <button
             type="submit"
-            [disabled]="registerForm.invalid || isLoading"
+            [disabled]="isLoading"
             >
             {{ isLoading ? 'Creating account...' : 'Create account' }}
         </button>

@@ -44,7 +44,6 @@ export class Suggest {
         email: this.suggestForm.controls.email.value ?? ''
       };
 
-      console.log('About to submit suggestion:', suggestion);
       this.suggestionService.submitSuggestion(suggestion).subscribe({
         next: () => {
           this.isSubmitting = false;

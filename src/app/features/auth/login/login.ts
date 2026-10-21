@@ -35,7 +35,12 @@ export class Login {
   });
 
   onSubmit() {
-      if (this.loginForm.invalid || this.isLoading) return;
+      if (this.isLoading) return;
+
+      if (this.loginForm.invalid) {
+        this.loginForm.markAllAsTouched();
+        return;
+      }
       
       this.errorMessage = '';
       this.isLoading = true;
@@ -55,14 +60,22 @@ export class Login {
         },
 
         error: (error: HttpErrorResponse) => {
-          this.isLoading = false;
+        this.isLoading = false;
 
-          if (error.status === 401) {
-            this.errorMessage = 'Login failed. Please check your details or try again.';
-          } else {
-            this.errorMessage = 'Something went wrong. Please try again later.';
-          }
+        if (error.status === 401) {
+          this.errorMessage =
+            'Invalid email or password. Please try again.';
+        } else if (error.status === 422) {
+          this.errorMessage =
+            'Please check your login details and try again.';
+        } else if (error.status === 0) {
+          this.errorMessage =
+            'Unable to connect to the server. Please try again.';
+        } else {
+          this.errorMessage =
+            'Something went wrong. Please try again later.';
         }
+      }
       });
     }
 

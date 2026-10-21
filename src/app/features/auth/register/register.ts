@@ -37,7 +37,12 @@ export class Register {
   });
 
   onSubmit() {
-      if (this.registerForm.invalid || this.isLoading) {
+      if (this.isLoading) {
+        return;
+      }
+
+      if (this.registerForm.invalid) {
+        this.registerForm.markAllAsTouched();
         return;
       }
 
@@ -65,16 +70,22 @@ export class Register {
         },
 
         error: (error) => {
-          this.isLoading = false;
+        this.isLoading = false;
 
-          if (error.status === 409) {
-            this.errorMessage =
-              'An account with this email already exists.';
-          } else {
-            this.errorMessage =
-              'Something went wrong. Please try again later.';
-          }
+        if (error.status === 409) {
+          this.errorMessage =
+            'An account with this email already exists.';
+        } else if (error.status === 422) {
+          this.errorMessage =
+            'Some details are invalid. Please review your information.';
+        } else if (error.status === 0) {
+          this.errorMessage =
+            'Unable to connect to the server. Check your internet connection.';
+        } else {
+          this.errorMessage =
+            'Something went wrong. Please try again later.';
         }
+      }
       });
     }
 

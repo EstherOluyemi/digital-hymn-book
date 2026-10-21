@@ -4,6 +4,7 @@ import { HymnService } from '../../../core/services/hymn';
 import { Hymn } from '../../../core/models/hymn.model';
 import { FavoritesService } from '../../../core/services/favorites';
 import { RecentlyViewedService } from '../../../core/services/recently-viewed';
+import { Auth } from '../../../core/services/auth';
 
 @Component({
   imports: [RouterLink],
@@ -16,6 +17,7 @@ export class HymnDetails {
   private hymnService = inject(HymnService);
   private favouritesService = inject(FavoritesService);
   private recentlyViewedService = inject(RecentlyViewedService);
+  private auth = inject(Auth);
 
   hymn: Hymn | undefined;
   previousHymn: Hymn | undefined;
@@ -29,9 +31,22 @@ export class HymnDetails {
       this.previousHymn = this.hymnService.getPreviousHymn(id);
       this.nextHymn = this.hymnService.getNextHymn(id);
 
-      if(this.hymn){
-        this.recentlyViewedService.addRecentlyViewed(this.hymn);
+      if (this.hymn) {
+    this.recentlyViewedService.addRecentlyViewed(this.hymn);
+
+      if (this.auth.currentUser()) {
+        this.recentlyViewedService
+          .recordViewedHymn(this.hymn.number)
+          .subscribe({
+            next: () => {
+              console.log('Hymn recorded successfully');
+            },
+            error: (error) => {
+              console.error('Failed to record hymn:', error);
+            }
+          });
       }
+    }
     });
   }
 
